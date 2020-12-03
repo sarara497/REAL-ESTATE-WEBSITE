@@ -4,7 +4,7 @@ const cors = require('cors')
 const dotenv = require("dotenv");
 dotenv.config();
 
-// Connecting with MongoDB
+// Connecting with my MongoDB
 mongoose.connect( process.env.DB_CONNECT,
     {
       useNewUrlParser: true, useUnifiedTopology: true,
