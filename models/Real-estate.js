@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 
 
 //create the schema 
-const Real_Estate = mongoose.Schema({
+const RealEstate = mongoose.Schema({
     location :{
         type: String,
         required :true
@@ -65,7 +65,7 @@ const Real_Estate = mongoose.Schema({
 
 //create the model 
 
-const Real_Estate = mongoose.model('Real_Estate' , Real_Estate)
+const Real_Estate = mongoose.model('Real_Estate' , RealEstate)
 
 //export the model
 
