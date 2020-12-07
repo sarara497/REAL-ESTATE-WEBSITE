@@ -1,0 +1,50 @@
+#nav{
+    z-index: 1 !important;
+    position: fixed !important;
+    background-color: rgba(255, 255, 255, 0) !important;
+}
+
+.MuiAppBar-colorPrimary{
+    background-color: rgba(51, 105, 255, 0) !important;
+}
+
+
+#logo{
+    background-size: cover;
+    width:15% !important;
+    height:140px !important;
+    background-color: #3f51b500 !important; 
+    margin-bottom: 20px;
+    margin-top: 20px;
+     margin-left: 20px;
+}
+
+
+#forNav{
+    background-color: #3f51b500 !important; 
+    margin-left: 30px !important;
+    font-variant: small-caps, bold!important;
+    font-size: large !important;
+    font-family: "Times New Roman", Times, serif  !important;
+    font-weight: 900 !important;
+    text-align: center !important;
+}
+
+.page-footer{
+    z-index: 1 !important;
+    margin-top: -28px !important;
+    background-color:  rgba(8, 41, 70, 0.973) !important;
+    color: white !important;
+} 
+
+.fot{
+    
+    margin-top: 50px !important;
+
+}
+
+.title{
+    display: flex;
+    margin-left: 24px !important;
+    margin-top: -70px !important;
+}

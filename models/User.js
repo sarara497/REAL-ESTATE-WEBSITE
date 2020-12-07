@@ -23,6 +23,7 @@ const User = mongoose.Schema({
     password: {
         type: String,
         required: true,
+        minlength : 6
     },
     phoneNumber: {
         type: String

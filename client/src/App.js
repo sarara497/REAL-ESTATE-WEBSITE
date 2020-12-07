@@ -2,6 +2,7 @@ import './App.css';
 import React from 'react'
 
 import { Switch, Route, Redirect } from 'react-router-dom';
+import Home from './components/Pages/Home'
 
 class App extends React.Component {
   constructor() {
@@ -14,9 +15,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <h1>Welcome to Frontend ^_^</h1>
-        </header>
+        <Home/>
       </div>
     );
   }
