@@ -2,7 +2,7 @@ const jwt = require('jsonwebtoken');
 const User = require('../models/User')
 
 const auth = async (req, res, next) => {
-
+//middleware
     try {
   
       const token = req.header('Token') // token sent from frontend
