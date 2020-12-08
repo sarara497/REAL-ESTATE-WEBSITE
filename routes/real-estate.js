@@ -3,7 +3,7 @@ const router = express.Router()
 const RealEstate = require('../models/Real-estate')
 
 //Add Real-Estate In DataBase
-router.post('/addReal_Estate', (req, res) => {
+router.post('/addReal_Estate',  (req, res) => {
     console.log("iam here in add real" )
     let realEstate = new RealEstate({
         location: req.body.location,
@@ -33,11 +33,11 @@ router.post('/addReal_Estate', (req, res) => {
   })
 
 //Delete One Real-Estate
-router.delete('/delete_Real_Estate/:id', (req, res) => {
+router.delete('/delete_Real_Estate/:id', async (req, res) => {
     console.log("iam here in delete real" )
     let _id = req.params.id
     console.log(_id)
-    let deletedRealEstate =  RealEstate.findOne({_id}) 
+    let deletedRealEstate = await RealEstate.findOne({_id}) 
     console.log(deletedReal_Estate)
     RealEstate.deleteOne({ _id })
     .then(( realestate ) => res.status(200).json(deletedRealEstate) )
@@ -45,10 +45,10 @@ router.delete('/delete_Real_Estate/:id', (req, res) => {
   });
 
   //Retrieve One Real-Estate by id
-  router.get('/retrieveReal-Estate/:id',(req,res)=> {
+  router.get('/retrieveReal-Estate/:id',async(req,res)=> {
     console.log("iam here in retrieve one real" )
     try{
-     const real_estate = RealEstate.findById(req.params.id)
+     const real_estate = await RealEstate.findById(req.params.id)
      res.json(real_estate)
     }catch(err){
      res.send('Error' , err)
