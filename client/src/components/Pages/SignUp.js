@@ -20,16 +20,29 @@ const styles = {
             width: '100ch',
         },
     },
+    icon: {
+        borderRadius: '50%',
+        width: 16,
+        height: 16,
+        boxShadow: 'inset 0 0 0 1px rgba(16,22,26,.2), inset 0 -1px 0 rgba(16,22,26,.1)',
+        backgroundColor: '#f5f8fa',
+        backgroundImage: 'linear-gradient(180deg,hsla(0,0%,100%,.8),hsla(0,0%,100%,0))',
+        '$root.Mui-focusVisible &': {
+            outline: '2px auto rgba(19,124,189,.6)',
+            outlineOffset: 2,
+        },
+    }
 }
 class SignUp extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            username:'',
+            username: '',
             email: '',
-            phoneNumber:'',
+            phoneNumber: '',
             password: '',
-        
+            userType:''
+
         }
         // this.handelOnClick = this.handelOnClick.bind(this)
         this.handleChange = this.handleChange.bind(this)
@@ -62,7 +75,7 @@ class SignUp extends React.Component {
                                 name="username"
                                 onChange={this.handleChange}
                                 variant="outlined"
-                            /><br /><br />
+                            /><br /><br /><br />
                             <TextField
                                 id="outlined-name"
                                 label="Email"
@@ -70,7 +83,7 @@ class SignUp extends React.Component {
                                 onChange={this.handleChange}
                                 variant="outlined"
                             />
-                            <br /><br />
+                            <br /><br /><br />
                             <TextField
                                 id="outlined-name"
                                 label="Phone Number"
@@ -78,7 +91,7 @@ class SignUp extends React.Component {
                                 onChange={this.handleChange}
                                 variant="outlined"
                             />
-                            <br /><br />
+                            <br /><br /><br />
                             <TextField
                                 id="outlined-name"
                                 label="Password"
@@ -86,23 +99,22 @@ class SignUp extends React.Component {
                                 onChange={this.handleChange}
                                 variant="outlined"
                             />
-                            
+
                         </div>
                         <br />
-                        <Link id="forget" href="/" >
-                            forget Your password ?
-                        </Link>
-
-                        <br /><br /><br />
-                        <Button id="forbutton" variant="contained" color="primary">
-                            LogIn
+                        <input className="radio1" type="radio" id="male" onChange={this.handleChange} name="userType" value="User"/>
+                        &nbsp;<label id="lab" for="male">User</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <input className="radio2" type="radio" id="female" onChange={this.handleChange} name="userType" value="Office"/>
+                                &nbsp;<label  id="lab" for="female">Office</label><br/><br />
+                                        <Button id="forbutton" variant="contained" color="primary">
+                                            SignUp
                         </Button>
-                        <br />
-                        <h5  id="h5">
-                            You don't have an Account ?    <Link id="sign" href="/" >
-                           SignUp
+                                        <br />
+                                        <h5 id="h5">
+                                            You  have an Account ?    <Link id="sign" href="/LogIn" >
+                                                LogIn
       </Link>
-                        </h5>
+                                        </h5>
 
                     </form>
                 </div>
