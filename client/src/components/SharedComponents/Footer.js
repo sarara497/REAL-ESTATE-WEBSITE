@@ -15,9 +15,10 @@ const FooterPage = () => {
 
             <img className="fot" id="logo" src={logo} />
 
-            <h5 className="title">Footer Content</h5>
+
+            <h5 className="title"></h5>
            
-          </MDBCol>
+          </MDBCol><br/><br/>
         </MDBRow>
       </MDBContainer>
       <div className="footer-copyright text-center py-3">

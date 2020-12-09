@@ -7,3 +7,82 @@
     background-color: #3f51b500 !important;
 }
 
+#searchOne{
+  
+    width:20% !important;
+    height:20px !important;
+    background-color: #3f51b5f1 !important;
+
+}
+
+
+#logIn_bg{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width:100% !important;
+    height:800px !important;
+    background-color: #3f51b500 !important;
+}
+
+#forLogIn{
+    margin-left: -1 !important;
+    width: 42% !important;
+    height: 800px !important;
+    background-color: #bacfdd9e!important;
+}
+
+#logoIn{
+    background-size: cover;
+    width:50% !important;
+    height:180px !important;
+    background-color: #424b7e00 !important; 
+    margin-bottom: 20px;
+    margin-top: 20px;
+    
+}
+
+#forbutton{
+   background-color: rgb(17, 3, 66) !important;
+   font-size: medium;
+}
+
+.MuiFormControl-root {
+    width: 60% !important;
+    height: 50px !important;
+}
+
+.MuiTextField-root{
+    width: 60% !important;
+    height: 50px !important;
+}
+
+#forget{
+    color: rgb(51, 47, 47);
+    margin-top: 8px !important;
+    margin-left: -180px !important;
+}
+
+#sign{
+    color: rgb(31, 4, 75) !important;
+    font-size: medium !important;
+    margin-top: 8px !important;
+   
+}
+
+#h5{
+    color: rgb(26, 4, 61);
+  
+}
+
+
+
+#logoSi{
+    background-size: cover;
+    width:40% !important;
+    height:160px !important;
+    background-color: #424b7e00 !important; 
+    margin-bottom: 20px;
+    margin-top: 20px;
+    
+}

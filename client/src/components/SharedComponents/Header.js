@@ -37,11 +37,18 @@ export default function ButtonAppBar() {
                     <img id="logo" src={logo} />
 
                     <div id="forNav">
-                        <Button  id="forNav" color="inherit">All  &nbsp; &nbsp;</Button>
-                        <Button  id="forNav"color="inherit">Room's &nbsp;&nbsp;</Button>
-                        <Button  id="forNav" color="inherit">Stores</Button>
-                        <Button  id="forNav"  color="inherit">Apartment</Button>
-                        <Button  id="forNav" color="inherit">Lands</Button>
+                        <Button id="forbtnH" color="inherit">All&nbsp;</Button>
+                        <Button id="forbtnH" color="inherit">Building&nbsp;</Button>
+                        <Button id="forbtnH" color="inherit">Villas&nbsp;</Button>
+                        <Button id="forbtnH" color="inherit">Apartments&nbsp;</Button>
+                        <Button id="forbtnH" color="inherit">Stores&nbsp;</Button>
+                        <Button id="forbtnH" color="inherit">Offices&nbsp;</Button>
+                        <Button id="forbtnH" color="inherit">Lands&nbsp;</Button>
+
+                    </div>
+                    <div id="forNav">
+                        <Button id="forAdd" color="inherit">Add Real-Estate&nbsp;</Button>
+                        <Button href="/LogIn"  id="forLogin" color="inherit">LogIn&nbsp;</Button>
                     </div>
                 </Toolbar>
             </AppBar>

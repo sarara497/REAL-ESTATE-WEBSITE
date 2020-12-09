@@ -8,6 +8,7 @@ import image from "../../../src/photo/home.jpg"
 
 import Header from '../SharedComponents/Header'
 import Footer from '../SharedComponents/Footer'
+import Search from '../SharedComponents/Search'
 
 const styles = {
     paperContainer: {
@@ -25,14 +26,14 @@ class Home extends React.Component {
 
         return (
             <div>
-            <div>
-                <Paper id="home_bg" style={styles.paperContainer}>
-                    <Header />
-                </Paper>
-            </div>
-          
-                  <Footer/>
-        
+                <div>
+                    <Paper id="home_bg" style={styles.paperContainer}>
+                        <Header />
+                    </Paper> 
+                </div>
+                {/* <Search /> */}
+                <Footer />
+
             </div>
         )
     }
