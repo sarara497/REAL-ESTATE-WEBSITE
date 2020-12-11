@@ -56,7 +56,7 @@ const RealEstate = mongoose.Schema({
         required: true,
       },
     
-    Owner_phoneNumber: {
+    owner_phoneNumber: {
           type: String,
           required: true,
       },

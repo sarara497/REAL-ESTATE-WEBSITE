@@ -47,7 +47,7 @@ export default function ButtonAppBar() {
 
                     </div>
                     <div id="forNav">
-                        <Button id="forAdd" color="inherit">Add Real-Estate&nbsp;</Button>
+                        <Button href="/AddReal_Estate" id="forAdd" color="inherit">Add Real-Estate&nbsp;</Button>
                         <Button href="/LogIn"  id="forLogin" color="inherit">LogIn&nbsp;</Button>
                     </div>
                 </Toolbar>

@@ -51,7 +51,7 @@ class LogIn extends React.Component {
         return (
             <div id="logIn_bg" style={styles.paperContainer}>
                 <div id="forLogIn">
-                    <img id="logoIn" src={logo} />
+                <a href="/"><img id="logoSi" src={logo} /></a> 
                     <form className={styles.root} noValidate autoComplete="off">
 
 
