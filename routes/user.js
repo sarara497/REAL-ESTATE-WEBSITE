@@ -9,9 +9,10 @@ const User = require('../models/User')
 
 
 router.get('/auth', auth, (req, res) => {
+  
     res.json({
         id: req.user._id,
-        name: req.user.name,
+        username: req.user.username,
         email: req.user.email,
         isAdmin: req.user.isAdmin,
         isOffice: req.user.isOffice,
@@ -22,6 +23,7 @@ router.get('/auth', auth, (req, res) => {
 
 router.post('/signupUser', async (req, res) => {
     console.log("iam here in User Sign up")
+    console.log("req.body", req.body)
     //Email Exist Or Not
     const isEmailExsist = await User.findOne({ email: req.body.email })
     if (isEmailExsist) return res.status(400).send("email already exist You can't regester again!!!")
@@ -32,7 +34,7 @@ router.post('/signupUser', async (req, res) => {
 
     //create the user 
     const user = new User({
-        name: req.body.name,
+        username: req.body.username,
         email: req.body.email,
         password: hashPassword,
         phoneNumber: req.body.phoneNumber,
@@ -66,10 +68,10 @@ router.post('/signInUser', async (req, res) => {
 
         if (match) {
             const token = await jwt.sign({ _id: user._id }, 'secret') // generate token in password match
-            res.header('Token', token).status(201).json({ success: true, token, isAdmin: user.isAdmin, isOffice: user.isOffice, isOffice: user.isOffice }) // sending token as a res and header
+            res.header('Token', token).status(201).json({ success: true, token, isAdmin: user.isAdmin, isUser: user.isUser, isOffice: user.isOffice }) // sending token as a res and header
         }
     } catch (err) {
-
+        console.log("iam in error")
         res.status(404).json({ success: false, err })
     }
 })

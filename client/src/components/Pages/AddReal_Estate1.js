@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
+import axios from "axios"
 
 import TextareaAutosize from '@material-ui/core/TextareaAutosize';
 
@@ -42,7 +43,7 @@ class AddReal_Estate1 extends React.Component {
             description: '',
             owner_phoneNumber: '',
         }
-        // this.handelOnClick = this.handelOnClick.bind(this)
+        this.handelOnClick = this.handelOnClick.bind(this)
         this.handleChange = this.handleChange.bind(this)
     }
     handleChange = (e) => {
@@ -52,10 +53,15 @@ class AddReal_Estate1 extends React.Component {
         console.log(value)
     }
 
-    //   handelOnClick = async (e) => {
-    //     console.log(this.state)
-    //     e.preventDefault();   
-    //   }
+      handelOnClick = async (e) => {
+        console.log(this.state)
+        e.preventDefault();  
+        axios.post('/real-estate/addReal_Estate', this.state)
+            .then((response) => {
+                console.log(response)
+            })
+       
+      }
 
 
     render() {
@@ -73,6 +79,7 @@ class AddReal_Estate1 extends React.Component {
                                     className="forText"
                                     label="Full_Address"
                                     name="full_Address"
+                                    value={this.state.full_Address}
                                     onChange={this.handleChange}
                                     variant="outlined"
                                 /><br /><br />
@@ -83,6 +90,7 @@ class AddReal_Estate1 extends React.Component {
                                     aria-label="maximum height"
                                     placeholder="Description"
                                     name="description"
+                                    value={this.state.description}
                                     onChange={this.handleChange}
                                     variant="outlined"
                                 />
@@ -92,13 +100,14 @@ class AddReal_Estate1 extends React.Component {
                                     id="outlined-name"
                                     label="Owner_phoneNumber"
                                     name="owner_phoneNumber"
+                                    value={this.state.owner_phoneNumber}
                                     onChange={this.handleChange}
                                     variant="outlined"
                                 />
                                 <br />
 
                             </div>  <br />
-                            <Button id="forbutton" variant="contained" color="primary">
+                            <Button onClick={this.handelOnClick} id="forbutton" variant="contained" color="primary">
                                 Add
                         </Button>
                             <br />

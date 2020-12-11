@@ -4,7 +4,7 @@ const uniqueValidator = require('mongoose-unique-validator')
 
 //create the schema 
 const Userr = mongoose.Schema({
-    name: {
+    username: {
         type: String,
         lowercase: true,
         required: [true, "can't be blank"],

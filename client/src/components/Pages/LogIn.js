@@ -3,6 +3,7 @@ import Paper from '@material-ui/core/Paper';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import Link from '@material-ui/core/Link';
+import axios from "axios"
 
 import image from "../../../src/photo/forSignUP.jpg"
 import logo from '../../../src/photo/logo.png'
@@ -30,7 +31,7 @@ class LogIn extends React.Component {
             email: '',
             password: ''
         }
-        // this.handelOnClick = this.handelOnClick.bind(this)
+        this.handelOnClick = this.handelOnClick.bind(this)
         this.handleChange = this.handleChange.bind(this)
     }
     handleChange = (e) => {
@@ -40,18 +41,26 @@ class LogIn extends React.Component {
         console.log(value)
     }
 
-    //   handelOnClick = async (e) => {
-    //     console.log(this.state)
-    //     e.preventDefault();   
-    //   }
+    handelOnClick = async (e) => {
+        console.log(this.state)
+        e.preventDefault();
+        axios.post('http://localhost:4000/users/signInUser', this.state)
+            .then((response) => {
+                localStorage.setItem('isAdmin', response.data.isAdmin)
+                localStorage.setItem('isOffice', response.data.isOffice)
+                localStorage.setItem('isUser', response.data.isUser)
+                localStorage.setItem('Token', response.data.token)
+                window.location.reload()
+            })
+    }
 
 
     render() {
-        //    const preventDefault = (event) => event.preventDefault();
+
         return (
             <div id="logIn_bg" style={styles.paperContainer}>
                 <div id="forLogIn">
-                <a href="/"><img id="logoSi" src={logo} /></a> 
+                    <a href="/"><img id="logoSi" src={logo} /></a>
                     <form className={styles.root} noValidate autoComplete="off">
 
 
@@ -80,13 +89,13 @@ class LogIn extends React.Component {
                         </Link>
 
                         <br /><br /><br />
-                        <Button id="forbutton" variant="contained" color="primary">
+                        <Button onClick={this.handelOnClick} id="forbutton" variant="contained" color="primary">
                             LogIn
                         </Button>
                         <br />
-                        <h5  id="h5">
+                        <h5 id="h5">
                             You don't have an Account ?    <Link id="sign" href="/SignUp" >
-                           SignUp
+                                SignUp
       </Link>
                         </h5>
 
