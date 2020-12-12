@@ -46,9 +46,9 @@ class AddReal_Estate extends React.Component {
             currency: '',
             real_type: '',
             area: '',
-            is_sale: '',
-            is_rent: '',
-            installment: '',
+            is_sale: false ,
+            is_rent: false ,
+            installment:false,
             rent_type: '',
             rent_dure: '',
             description:'',
@@ -74,7 +74,23 @@ class AddReal_Estate extends React.Component {
             .then((response) => {
                 console.log(response)
             })
-
+            this.setState({
+                location: '',
+                price: '',
+                lowest_price: '',
+                currency: '',
+                real_type: '',
+                area: '',
+                is_sale: false ,
+                is_rent: false ,
+                installment:false,
+                rent_type: '',
+                rent_dure: '',
+                description:'',
+                owner_phoneNumber:'',
+                full_Address:''
+            })
+    
       }
 
 
@@ -185,11 +201,11 @@ class AddReal_Estate extends React.Component {
                         </form>
                         <form id="Add2" >
                             <div>
-                                <input className="radio1" type="radio" id="male" onChange={this.handleChange} name="is_sale" value="Sale" />
+                                <input className="radio1" type="radio" id="male" onChange={this.handleChange} name="is_sale" value="true" />
                                    &nbsp;<label id="lab" for="male">Sale</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                               <input className="radio2" type="radio" id="female" onChange={this.handleChange} name="is_rent" value="Rent" />
+                               <input className="radio2" type="radio" id="female" onChange={this.handleChange} name="is_rent" value="true" />
                                    &nbsp;<label id="lab" for="female">Rent</label><br /><br />
-                                <input className="radio2" type="radio" id="installment" onChange={this.handleChange} name=" installment" value=" Installment" />
+                                <input className="radio2" type="radio" id="installment" onChange={this.handleChange} name=" installment" value=" true" />
                                       &nbsp;<label id="lab" for="installment">If you accept the installment system , put a check on this item.</label><br />
                                 <br /><br />
                             </div>

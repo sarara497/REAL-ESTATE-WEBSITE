@@ -5,7 +5,9 @@ const RealEstate = require('../models/Real-estate')
 //Add Real-Estate In DataBase
 router.post('/addReal_Estate',  (req, res) => {
     console.log("iam here in add real" )
-    let realEstate = new RealEstate({
+    console.log("req.body" , req.body )
+
+    const realEstate = new RealEstate({
         location: req.body.location,
         real_type: req.body.real_type,
         area: req.body.area,
@@ -19,17 +21,18 @@ router.post('/addReal_Estate',  (req, res) => {
         rent_dure: req.body.rent_dure,
         full_Address: req.body.full_Address,
         description: req.body.description,
-        Owner_phoneNumber: req.body.Owner_phoneNumber,
+        owner_phoneNumber: req.body.owner_phoneNumber,
     })
-    realEstate.save((err, restau) => {
-        
-      if (err){return res.status(404).json({ error: err })} 
-      else{
-          console.log("Real Estate" , realEstate)
-          return    res.json(realEstate)
-      }
-   
-    })
+
+    try {
+      //save Real in DB
+      console.log("iam in try " , realEstate)
+      const savedReal =  realEstate.save();
+      consol.log("save Real " , savedReal)
+  }
+  catch (err) {
+      res.status(400).send(err);
+  }
   })
 
 //Delete One Real-Estate

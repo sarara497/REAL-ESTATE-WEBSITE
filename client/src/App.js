@@ -57,7 +57,7 @@ class App extends React.Component {
           <Route path="/LogIn" exact render={() => <LogIn />} />
           <Route path="/SignUp" exact render={() => <SignUp />} />
           <Route path="/AddReal_Estate" exact render={() =>  userId ?
-                  <AddReal_Estate userId={userId} /> : <Redirect to='/LogIn' />} />
+            <AddReal_Estate userId={userId} /> : <Redirect to='/LogIn' />} />
          
         </Switch>
 
