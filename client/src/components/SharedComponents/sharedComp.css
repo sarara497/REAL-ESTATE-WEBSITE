@@ -54,7 +54,15 @@
     text-align: center !important;
     background-color: rgba(0, 128, 128, 0.281)!important;
 }
-
+#forLogout{
+    margin-left: 20px !important;
+    font-variant: small-caps, bold!important;
+    font-size: medium !important;
+    font-family: "Times New Roman", Times, serif  !important;
+    font-weight: 200 !important;
+    text-align: center !important;
+    background-color: rgba(0, 128, 128, 0.281)!important;
+}
 .page-footer{
     z-index: 1 !important;
     margin-top: -1px !important;
