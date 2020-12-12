@@ -68,7 +68,7 @@ router.post('/signInUser', async (req, res) => {
 
         if (match) {
             const token = await jwt.sign({ _id: user._id }, 'secret') // generate token in password match
-            res.header('Token', token).status(201).json({ success: true, token, isAdmin: user.isAdmin, isUser: user.isUser, isOffice: user.isOffice }) // sending token as a res and header
+            res.header('Token', token).status(201).json({ success: true, token, isAdmin: user.isAdmin, isUser: user.isUser, isOffice: user.isOffice ,userId:user._id }) // sending token as a res and header
         }
     } catch (err) {
         console.log("iam in error")

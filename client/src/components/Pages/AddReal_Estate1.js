@@ -3,6 +3,7 @@ import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import axios from "axios"
 
+
 import TextareaAutosize from '@material-ui/core/TextareaAutosize';
 
 import image from "../../../src/photo/forAdd.jpg"
@@ -56,16 +57,17 @@ class AddReal_Estate1 extends React.Component {
       handelOnClick = async (e) => {
         console.log(this.state)
         e.preventDefault();  
-        axios.post('/real-estate/addReal_Estate', this.state)
+        axios.post('http://localhost:4000/real-estate/addReal_Estate', this.state)
             .then((response) => {
                 console.log(response)
             })
        
       }
 
-
+    
     render() {
         //    const preventDefault = (event) => event.preventDefault();
+   
         return (
             <div id="logIn_bg" style={styles.paperContainer}>
                 <div id="Add">

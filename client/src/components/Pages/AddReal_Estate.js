@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import Link from '@material-ui/core/Link';
+import  AddReal from './AddReal_Estate1'
 
 import image from "../../../src/photo/forAdd.jpg"
 import logo from '../../../src/photo/logo.png'
@@ -65,9 +66,12 @@ class AddReal_Estate extends React.Component {
     //     e.preventDefault();   
     //   }
 
+    
 
     render() {
         //    const preventDefault = (event) => event.preventDefault();
+     
+  
         return (
             <div id="logIn_bg" style={styles.paperContainer}>
                 <div id="Add">
@@ -153,8 +157,8 @@ class AddReal_Estate extends React.Component {
                                 &nbsp;<label id="lab" for="female">Rent</label><br /><br />
                             <input className="radio2" type="radio" id="installment" onChange={this.handleChange} name=" installment" value=" Installment" />
                                 &nbsp;<label id="lab" for="installment">If you accept the installment system , put a check on this item.</label><br />
-                                <br /><br />   </div> <Button  onclick={this.handelOnClick} href="/AddReal_Estate1" id="forbutton" variant="contained" color="primary">
-                                Next
+                                <br /><br />   </div> <Button onclick={this.handelOnClick} href="/AddReal_Estate1" id="forbutton" variant="contained" color="primary">
+                                Next 
                         </Button>
                         </form>
                     </div>

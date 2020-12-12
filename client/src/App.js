@@ -46,6 +46,7 @@ class App extends React.Component {
 
 
   render() {
+    const {userId} = this.state
     return (
       <div className="App">
 
@@ -55,7 +56,8 @@ class App extends React.Component {
           <Route path="/" exact render={() => <Home />} />
           <Route path="/LogIn" exact render={() => <LogIn />} />
           <Route path="/SignUp" exact render={() => <SignUp />} />
-          <Route path="/AddReal_Estate" exact render={() => <AddReal_Estate />} />
+          <Route path="/AddReal_Estate" exact render={() =>  userId ?
+                  <AddReal_Estate userId={userId} /> : <Redirect to='/LogIn' />} />
           <Route path="/AddReal_Estate1" exact render={() => <AddReal_Estate1 />} />
         </Switch>
 
