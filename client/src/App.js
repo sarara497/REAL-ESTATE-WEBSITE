@@ -7,7 +7,7 @@ import Home from './components/Pages/Home'
 import LogIn from './components/Pages/LogIn'
 import SignUp from './components/Pages/SignUp'
 import AddReal_Estate from './components/Pages/AddReal_Estate'
-import AddReal_Estate1 from './components/Pages/AddReal_Estate1'
+
 
 class App extends React.Component {
   constructor() {
@@ -58,7 +58,7 @@ class App extends React.Component {
           <Route path="/SignUp" exact render={() => <SignUp />} />
           <Route path="/AddReal_Estate" exact render={() =>  userId ?
                   <AddReal_Estate userId={userId} /> : <Redirect to='/LogIn' />} />
-          <Route path="/AddReal_Estate1" exact render={() => <AddReal_Estate1 />} />
+         
         </Switch>
 
 

@@ -124,6 +124,7 @@ class SignUp extends React.Component {
                                 id="outlined-name"
                                 label="Password"
                                 name="password"
+                                type="password"
                                 value={this.state.password}
                                 onChange={this.handleChange}
                                 variant="outlined"

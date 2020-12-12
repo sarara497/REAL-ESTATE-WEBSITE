@@ -49,18 +49,26 @@
    font-size: medium;
 }
 
-.MuiFormControl-root {
-    width: 60% !important;
-    height: 50px !important;
+#forbuttonn{
+    background-color: rgb(17, 3, 66) !important;
+    font-size: medium;
+    width: 40% !important;
+    height: 55px !important;
+    margin-left: 70px;
+ }
+
+
+.MuiInputBase-root {
+    width: 90% !important;
+    height: 55px !important;
+    /* display: revert !important; */
 }
 
-.MuiTextField-root{
-    width: 60% !important;
-    height: 50px !important;
-}
+
+
 #forTextArea{
-    width: 60% !important;
-    height: 50px !important;
+    width: 90% !important;
+    height: 55px !important;
 }
 
 #forget{
@@ -117,7 +125,7 @@
 
 #Add{
    
-    width: 70% !important;
+    width: 90% !important;
     height: 700px !important;
     background-color: #bacfdd9e!important;
     display:flex;
@@ -126,19 +134,19 @@
 }
 #Add1{
    
-    width: 70% !important;
-    height: 550px !important;
+    width: 90% !important;
+    height: 700px !important;
     display:flex;
     flex-direction: row;
-    margin: 25px auto;
-}
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;}
 
 #Add2{
    
-    width: 50% !important;
-    height:300px !important;
- 
-    display:flex;
+    width: 70%!important;
+    height: 500px !important;
+    display: flex;
     flex-direction: column;
   
 }

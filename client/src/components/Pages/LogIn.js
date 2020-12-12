@@ -79,6 +79,7 @@ class LogIn extends React.Component {
                                 id="outlined-name"
                                 label="Password"
                                 name="password"
+                                type="password"
                                 onChange={this.handleChange}
                                 variant="outlined"
                             />
