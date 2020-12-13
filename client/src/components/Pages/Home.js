@@ -9,6 +9,7 @@ import image from "../../../src/photo/home.jpg"
 import Header from '../SharedComponents/Header'
 import LogIn_Header from '../SharedComponents/LogIn_Header'
 import Footer from '../SharedComponents/Footer'
+import REal_Estates from './Retrive_Real'
 import Search from '../SharedComponents/Search'
 
 const styles = {
@@ -25,8 +26,8 @@ const styles = {
  const Home  = ({userId})=>{
    
         return (
-            <div>
-                <div>
+            <div id="home_bg" style={styles.paperContainer}>
+                <div >
                     <Paper id="home_bg" style={styles.paperContainer}>
                     {
                     userId ?
@@ -38,6 +39,7 @@ const styles = {
                     </Paper> 
                 </div>
                 {/* <Search /> */}
+                <REal_Estates/>
                 <Footer />
 
             </div>

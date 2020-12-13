@@ -43,7 +43,7 @@ export default function ButtonAppBar() {
                         <Button id="forbtnH" color="inherit">Apartments&nbsp;</Button>
                         <Button id="forbtnH" color="inherit">Stores&nbsp;</Button>
                         <Button id="forbtnH" color="inherit">Offices&nbsp;</Button>
-                        <Button id="forbtnH" color="inherit">Lands&nbsp;</Button>
+                        <Button href="/Card" id="forbtnH" color="inherit">Lands&nbsp;</Button>
 
                     </div>
                     <div id="forNav">

@@ -69,6 +69,9 @@
 #forTextArea{
     width: 90% !important;
     height: 55px !important;
+    background-color: #bacfdd9e!important;
+    font-size: large;
+    font-weight: 500;
 }
 
 #forget{
@@ -180,3 +183,24 @@
     font-size: inherit;
     line-height: inherit;
 }
+
+.wellcom{
+    font-size: 15px !important;
+    color: rgba(249, 252, 87, 0.719) !important;
+    font-family:serif !important;
+    
+  }
+
+  #cardsPage{
+    display: flex !important;
+    flex-direction: row !important;
+    
+    margin: auto !important;
+  }
+
+  #cards{
+    display: flex !important;
+    flex-direction: column !important;
+    
+    margin: auto !important;
+  }

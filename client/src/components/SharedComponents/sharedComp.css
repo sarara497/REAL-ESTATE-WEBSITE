@@ -21,7 +21,7 @@
 
 
 #forNav{
-    background-color: #3f51b500 !important; 
+    background-color: #3235496c !important; 
  
     
 }
@@ -81,4 +81,24 @@
     display: flex;
     margin-left: 24px !important;
     margin-top: -70px !important;
+}
+
+#rootDiv{
+    display:  100px flex;
+}
+
+#cardd{
+    opacity: 0.6 !important;
+}
+
+#cardd:hover{
+    opacity: 1 !important;
+}
+
+
+
+#textt{
+    opacity: 1 !important;
+    background-size: cover !important;
+   
 }
