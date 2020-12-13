@@ -20,18 +20,22 @@
 }
 
 
-#forNav{
+/* #forNav{
     background-color: #3235496c !important; 
  
     
+} */
+#forh{
+    background-color: rgb(87 83 97) !important;
+
 }
 
 #forbtnH{
     margin-left: 10px !important;
     font-variant: small-caps, bold!important;
-    font-size: medium !important;
+    font-size: 20px !important;
     font-family: "Times New Roman", Times, serif  !important;
-    font-weight: 900 !important;
+    font-weight: 700 !important;
     text-align: center !important;
 
 }
@@ -43,7 +47,8 @@
     font-family: "Times New Roman", Times, serif  !important;
     font-weight: 100 !important;
     text-align: center !important;
-    background-color: rgba(0, 128, 128, 0.281)!important;
+    background-color:  rgba(8, 41, 70, 0.973) !important;
+    border-radius: 20px !important;
 }
 #forLogin{
     margin-left: 20px !important;
@@ -52,16 +57,19 @@
     font-family: "Times New Roman", Times, serif  !important;
     font-weight: 500 !important;
     text-align: center !important;
-    background-color: rgba(0, 128, 128, 0.281)!important;
+ 
+    background-color:  rgba(8, 41, 70, 0.973) !important;
+    border-radius: 25px !important;
 }
 #forLogout{
     margin-left: 20px !important;
     font-variant: small-caps, bold!important;
-    font-size: medium !important;
+    font-size: small !important;
     font-family: "Times New Roman", Times, serif  !important;
     font-weight: 200 !important;
     text-align: center !important;
-    background-color: rgba(0, 128, 128, 0.281)!important;
+    background-color:  rgba(8, 41, 70, 0.973) !important;
+    border-radius: 25px !important;
 }
 .page-footer{
     z-index: 1 !important;
@@ -85,6 +93,7 @@
 
 #rootDiv{
     display:  100px flex;
+    margin-right: 30px !important;
 }
 
 #cardd{
@@ -101,4 +110,10 @@
     opacity: 1 !important;
     background-size: cover !important;
    
+}
+
+#ccard{
+width: 400px !important;
+background-color: #362b52 !important;
+height: 600px !important;
 }

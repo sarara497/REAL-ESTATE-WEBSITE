@@ -26,8 +26,8 @@ const styles = {
  const Home  = ({userId})=>{
    
         return (
-            <div id="home_bg" >
-                <div >
+            <div >
+                <div id="home_bg" >
                     <Paper >
                     {
                     userId ?
@@ -35,11 +35,13 @@ const styles = {
                      
                         :
                         <Header/>
-                }
-                    </Paper> 
+                    }
+                    </Paper><br/><br /><br /><br /><br /><br /><br /><br /><br />
+                    <h4 className="wellcom"> The  Place Where You will Find All Real-Estate in Your Hands ♥ !</h4>
+
                 </div>
                 {/* <Search /> */}
-                <REal_Estates/>
+                <div id="forh" ><REal_Estates/></div> 
                 <Footer />
 
             </div>

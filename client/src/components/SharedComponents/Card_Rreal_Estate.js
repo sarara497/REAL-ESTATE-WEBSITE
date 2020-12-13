@@ -11,10 +11,7 @@ import Typography from '@material-ui/core/Typography';
 
 import image from '../../../src/photo/for_Card.jpg'
 const useStyles = makeStyles({
-    root: {
-        maxWidth: 500,
-        backgroundColor: '#080a58',
-    },
+   
     media: {
         height: 320,
   
@@ -26,7 +23,7 @@ const useStyles = makeStyles({
         fontSize:30,
         fontWeight:700,
         color:'#f6f9f2',
-        backgroundColor: '#080a58',
+        backgroundColor: '#362b52',
         borderRadius:16 ,
         justifyContent:'center',
        
@@ -37,7 +34,7 @@ const useStyles = makeStyles({
         fontSize:30,
         fontWeight:700,
         color:'#f6f9f2',
-        backgroundColor: '#080a58',
+        backgroundColor: '#362b52',
         borderRadius:16 ,
         justifyContent:'center',
     },
@@ -47,7 +44,7 @@ const useStyles = makeStyles({
         fontSize:30,
         fontWeight:700,
         color:'#f6f9f2',
-        backgroundColor: '#080a58',
+        backgroundColor: '#362b52',
         borderRadius:16 ,
         justifyContent:'center',
     }
@@ -58,7 +55,7 @@ const useStyles = makeStyles({
         fontSize:30,
         fontWeight:700,
         color:'#f6f9f2',
-        backgroundColor: '#080a58',
+        backgroundColor: '#362b52',
         borderRadius:16 ,
         justifyContent:'center',
     }
@@ -73,7 +70,7 @@ const MediaCard = ({real_type, location, is_sale , is_rent }) => {
     const classes = useStyles();
     return (
         <span id="rootDiv">
-            <Card   className={classes.root} >
+            <Card   id="ccard" >
                 <CardActionArea>
                     <CardMedia
                     id="cardd"

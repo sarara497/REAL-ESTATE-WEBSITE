@@ -59,9 +59,9 @@ router.delete('/delete_Real_Estate/:id', async (req, res) => {
   })
   
   //Retrieve all Real-Estate 
-  router.get('/retrieveReal-Estate',(req, res)=> {
+  router.get('/retrieveReal-Estate', async(req, res)=> {
     console.log("iam here in retrieve all real" )
-    RealEstate.find()
+    await RealEstate.find()
         .exec( (err,real_estate) => {
             if(err) return res.status(404).json({success:false})
             res.status(200).json(real_estate)

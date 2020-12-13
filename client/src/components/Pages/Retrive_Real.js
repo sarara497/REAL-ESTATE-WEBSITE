@@ -34,10 +34,7 @@ class Real_Estats extends Component {
   
       return (
           <div id="cardsPage">
-           <div id="cPage" >
-         
-             <h3 className="wellcom"> The  Place Where You will Find All Real-Estate in Your Hands ♥ !</h3><br /><br />
-              
+           <div id="cPage" >      
             <div  id="cardsPage">
               {
                 real_estate.map(({ real_type, location, is_sale , is_rent}, index) =>
