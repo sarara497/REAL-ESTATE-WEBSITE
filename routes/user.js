@@ -17,6 +17,7 @@ router.get('/auth', auth, (req, res) => {
         isAdmin: req.user.isAdmin,
         isOffice: req.user.isOffice,
         isUser: req.user.isUser,
+        
         success: true
     })
 })
@@ -65,10 +66,14 @@ router.post('/signInUser', async (req, res) => {
         const user = await User.findOne({ email: req.body.email }) // find user  in db
         const match = await bcrypt.compare(req.body.password, user.password) // compare given password with hashed db password
         console.log("isMAtch:", match)
+        console.log("username:", user.username)
 
         if (match) {
             const token = await jwt.sign({ _id: user._id }, 'secret') // generate token in password match
-            res.header('Token', token).status(201).json({ success: true, token, isAdmin: user.isAdmin, isUser: user.isUser, isOffice: user.isOffice ,userId:user._id }) // sending token as a res and header
+            res.header('Token', token).status(201).json({ success: true, token, isAdmin: user.isAdmin, isUser: user.isUser, isOffice: user.isOffice ,userId:user._id , username : user.username }) // sending token as a res and header
+        }
+        else{
+            console.log("your Password wrong")
         }
     } catch (err) {
         console.log("iam in error")

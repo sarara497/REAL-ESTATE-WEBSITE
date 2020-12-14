@@ -21,7 +21,7 @@ const styles = {
 
 
 
-const Home = ({ userId }) => {
+const ProfilePage = ({ username }) => {
 
     return (
         <div >
@@ -34,7 +34,7 @@ const Home = ({ userId }) => {
                 <h4 className="wellcom"> The  Place Where You will Find All Real-Estate in Your Hands ♥ !</h4>
             </div>
             <div id="formation" >
-                <h1>Personal Information</h1>
+                <h1>Hello {username}</h1>
                 <br /><br />
             </div>
                 <Footer />
@@ -45,4 +45,4 @@ const Home = ({ userId }) => {
 
 
 
-export default Home;
+export default ProfilePage;

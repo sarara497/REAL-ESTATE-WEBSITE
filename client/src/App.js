@@ -13,12 +13,13 @@ class App extends React.Component {
   constructor() {
     super()
     this.state = {
-      name: "",
+
       email: "",
       isAdmin: localStorage.getItem('isAdmin'),
       isOffice: localStorage.getItem('isOffice'),
       isUser: localStorage.getItem('isUser'),
-      userId: localStorage.getItem('userId')
+      userId: localStorage.getItem('userId'),
+      username: localStorage.getItem('username')
     }
   }
 
@@ -37,7 +38,7 @@ class App extends React.Component {
       .then(response => response.json())
       .then(data => {
         console.log(data)
-        this.setState({ name: data.name, email: data.email, isAdmin: data.isAdmin, isOffice: data.isOffice, isUser: data.isUser })
+        this.setState({email: data.email, isAdmin: data.isAdmin, isOffice: data.isOffice, isUser: data.isUser })
         // console.log(this.state.isAdmin)
         // console.log(this.state.isOffice)
         // console.log(this.state.isUser)
@@ -46,7 +47,7 @@ class App extends React.Component {
 
 
   render() {
-    const {userId} = this.state
+    const {userId , username} = this.state
     return (
       <div className="App">
 
@@ -56,7 +57,7 @@ class App extends React.Component {
           <Route path="/" exact render={() => <Home userId={userId} />} />
         
           <Route path="/LogIn" exact render={() => <LogIn />} />
-          <Route path="/Profile" exact render={() => <Profile />} />
+          <Route path="/Profile" exact render={() => <Profile username={username} />} />
           <Route path="/SignUp" exact render={() => <SignUp />} />
           <Route path="/AddReal_Estate" exact render={() =>  userId ?
             <AddReal_Estate userId={userId} /> : <Redirect to='/LogIn' />} />

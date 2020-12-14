@@ -50,7 +50,8 @@ class LogIn extends React.Component {
                 localStorage.setItem('isOffice', response.data.isOffice)
                 localStorage.setItem('isUser', response.data.isUser)
                 localStorage.setItem('userId', response.data.userId)
-                localStorage.setItem('Token', response.data.token)
+                localStorage.setItem('username', response.data.username)
+          
                 window.location.reload()
             })
     }
