@@ -7,7 +7,7 @@ import Paper from '@material-ui/core/Paper';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import './sharedComp.css'
-// import MenuIcon from '@material-ui/icons/Menu';
+import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 
 import logo from '../../../src/photo/logo.png'
 
@@ -61,6 +61,9 @@ export default function LogInButtonAppBar() {
                             color="inherit">
                             LogOut&nbsp;
                                 </Button>
+                    </div>
+                    <div id="forAcc">
+                       <a id="acc" href="/Profile"> <AccountCircleIcon id="foricon"/></a>
                     </div>
                 </Toolbar>
             </AppBar>

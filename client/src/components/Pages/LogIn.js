@@ -91,7 +91,7 @@ class LogIn extends React.Component {
                         </Link>
 
                         <br /><br /><br />
-                        <Button onClick={this.handelOnClick} id="forbutton" variant="contained" color="primary">
+                        <Button href="/" onClick={this.handelOnClick} id="forbutton" variant="contained" color="primary">
                             LogIn
                         </Button>
                         <br />

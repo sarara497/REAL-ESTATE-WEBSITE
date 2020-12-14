@@ -16,32 +16,36 @@
     background-color: #3f51b500 !important; 
     margin-bottom: 20px;
     margin-top: 20px;
-     margin-left: 20px;
+     margin-left: 10px;
 }
 
+ /* #forNav{
+  background-color: #3235496c !important; 
+  
+}  */
 
-/* #forNav{
-    background-color: #3235496c !important; 
- 
-    
-} */
+
 #forh{
     background-color: rgb(87 83 97) !important;
 
 }
 
 #forbtnH{
-    margin-left: 10px !important;
+    margin-left:15px !important;
     font-variant: small-caps, bold!important;
-    font-size: 20px !important;
+    font-size: 19px !important;
     font-family: "Times New Roman", Times, serif  !important;
-    font-weight: 700 !important;
+    font-weight: 1000 !important;
     text-align: center !important;
 
 }
 
+#forbtnH:hover{
+    background-color: rgba(27, 75, 117, 0.973) !important; 
+}
+
 #forAdd{
-    margin-left: 50px !important;
+    margin-left: 18px !important;
     font-variant: small-caps, bold!important;
     font-size: medium !important;
     font-family: "Times New Roman", Times, serif  !important;
@@ -49,6 +53,9 @@
     text-align: center !important;
     background-color:  rgba(8, 41, 70, 0.973) !important;
     border-radius: 20px !important;
+}
+#forAdd:hover{
+    background-color: rgba(27, 75, 117, 0.973) !important; 
 }
 #forLogin{
     margin-left: 20px !important;
@@ -61,8 +68,12 @@
     background-color:  rgba(8, 41, 70, 0.973) !important;
     border-radius: 25px !important;
 }
+
+#forLogin:hover{
+    background-color: rgba(27, 75, 117, 0.973) !important; 
+}
 #forLogout{
-    margin-left: 20px !important;
+    margin-left: 10px !important;
     font-variant: small-caps, bold!important;
     font-size: small !important;
     font-family: "Times New Roman", Times, serif  !important;
@@ -71,6 +82,30 @@
     background-color:  rgba(8, 41, 70, 0.973) !important;
     border-radius: 25px !important;
 }
+#forLogout:hover{
+    background-color: rgba(27, 75, 117, 0.973) !important; 
+}
+
+#forAcc{
+   
+    margin-left: 10px !important;
+    font-variant: small-caps, bold!important;
+    font-size: large !important;
+    font-family: "Times New Roman", Times, serif  !important;
+    font-weight: 200 !important;
+    text-align: center !important;
+}
+#acc{
+   color: rgba(8, 41, 70, 0.973) !important; 
+   
+}
+
+#foricon{
+    font-size: 65px !important;
+}
+ #acc:hover{
+    color: rgba(27, 75, 117, 0.973) !important;   
+ }
 .page-footer{
     z-index: 1 !important;
     margin-top: -1px !important;
