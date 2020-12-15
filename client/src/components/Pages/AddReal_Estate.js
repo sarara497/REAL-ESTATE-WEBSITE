@@ -53,7 +53,8 @@ class AddReal_Estate extends React.Component {
             rent_dure: '',
             description:'',
             owner_phoneNumber:'',
-            full_Address:''
+            full_Address:'',
+            id_User : localStorage.getItem("userId")
         }
 
         this.handelOnClick = this.handelOnClick.bind(this)
@@ -70,7 +71,7 @@ class AddReal_Estate extends React.Component {
       handelOnClick = async (e) => {
         console.log(this.state)
         e.preventDefault();  
-        axios.post('http://localhost:4000/real-estate/addReal_Estate', this.state)
+        axios.post('http://localhost:4000/real-estate/addReal_Estate', this.state,)
             .then((response) => {
                 console.log(response)
             })

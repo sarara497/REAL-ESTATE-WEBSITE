@@ -66,6 +66,7 @@ router.post('/signInUser', async (req, res) => {
         const user = await User.findOne({ email: req.body.email }) // find user  in db
         const match = await bcrypt.compare(req.body.password, user.password) // compare given password with hashed db password
         console.log("isMAtch:", match)
+        console.log("the user", user)
         console.log("username:", user.username)
 
         if (match) {

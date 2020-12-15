@@ -2,8 +2,10 @@ const express = require('express')
 const router = express.Router()
 const RealEstate = require('../models/Real-estate')
 
+const User = require('../models/User')
+
 //Add Real-Estate In DataBase
-router.post('/addReal_Estate',  (req, res) => {
+router.post('/addReal_Estate', async (req, res) => {
     console.log("iam here in add real" )
     console.log("req.body" , req.body )
 
@@ -22,13 +24,21 @@ router.post('/addReal_Estate',  (req, res) => {
         full_Address: req.body.full_Address,
         description: req.body.description,
         owner_phoneNumber: req.body.owner_phoneNumber,
+        id_User:req.body.id_User
     })
 
     try {
       //save Real in DB
-      console.log("iam in try " , realEstate)
       const savedReal =  realEstate.save();
       consol.log("save Real " , savedReal)
+      console.log("iam in try " , realEstate._id)
+      console.log("userId " , req.body.id_User)
+      const user = await User.findOne({ _id:  req.body.id_User })
+      console.log("user" , user)
+      user. id_real_estate.push(realEstate._id)
+      console.log("user" , user)
+      console.log("Array " , user. id_real_estate)
+    
   }
   catch (err) {
       res.status(400).send(err);
