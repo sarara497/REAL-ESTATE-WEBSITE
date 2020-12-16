@@ -129,10 +129,14 @@
 #rootDiv{
     display:  100px flex;
     margin-right: 30px !important;
+    margin-bottom: 1.8rem;
 }
 
 #cardd{
     opacity: 0.6 !important;
+    position: relative;
+    text-align: center;
+    color: white;
 }
 
 #cardd:hover{
@@ -149,6 +153,71 @@
 
 #ccard{
 width: 400px !important;
-background-color: #362b52 !important;
-height: 600px !important;
+background-color: #2b273363 !important;
+height: 320px !important;
+}
+
+#textforT:hover{
+    background-color: #25222c85 !important;
+    background-size: cover !important;
+}
+#textforT{
+    position:absolute;
+    top: 8px ;
+    text-align:center;
+    font-size: x-large !important;
+    font-weight: 900;
+    color:#f6f9f2;
+    /* background-color: #362b5263 !important; */
+    border-radius:16px ;
+    
+}
+#textforL:hover{
+    background-color: #25222c85 !important;
+    background-size: cover !important;
+}
+
+#textforL{
+    position: absolute;
+  bottom: 40px;
+  left: 16px;
+    text-align:center;
+    font-size:30px !important;
+    font-weight: 900;
+    color:#f6f9f2;
+    /* background-color: #362b5263 !important; */
+    border-radius:16px ;
+    
+}
+#textforis:hover{
+    background-color: #25222c85 !important;
+    background-size: cover !important;
+}
+#textforis{
+    position: absolute;
+    bottom: 100px;
+    left: 16px;
+    text-align:center;
+    font-size:30px !important;
+    font-weight: 900;
+    color:#f6f9f2;
+    /* background-color: #362b5263 !important; */
+    border-radius:16px !important ;
+    
+}
+#textforB:hover{
+    background-color: #110333 !important;
+}
+#textforB{
+    
+    position: absolute;
+  bottom: 50px;
+  right: 16px;
+    text-align:center;
+    font: size 20px !important;
+    font-weight:1000 px !important ;
+    color:#f6f9f2;
+    background-color: #362b52 !important;
+    border-radius:16px  !important;
+    
 }

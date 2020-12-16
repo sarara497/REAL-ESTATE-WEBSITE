@@ -132,9 +132,9 @@ class SignUp extends React.Component {
 
                         </div>
                         <br />
-                        <input className="radio1" type="radio" id="male" onChange={this.handleChangeRadio} name="isUser" value={this.state.isUser} />
+                        <input className="radio1" type="radio" id="user" onChange={this.handleChangeRadio} name="isUser" value="true" />
                         &nbsp;<label id="lab" for="male">User</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <input className="radio2" type="radio" id="female" onChange={this.handleChangeRadio} name="isOffice" value={this.state.isOffice} />
+                                <input className="radio2" type="radio" id="office" onChange={this.handleChangeRadio} name="isOffice" value="true" />
                                 &nbsp;<label id="lab" for="female">Office</label><br /><br />
                         <Button id="forbutton"  onClick={this.handelOnClick} variant="contained" color="primary">
                             SignUp

@@ -38,11 +38,7 @@ const Userr = mongoose.Schema({
     isUser: {
         type: Boolean
     }
-    ,
-    id_real_estate: [{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Real_Estate'
-    }]
+    
 })
 
 

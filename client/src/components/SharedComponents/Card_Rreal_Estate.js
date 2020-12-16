@@ -14,52 +14,57 @@ const useStyles = makeStyles({
    
     media: {
         height: 320,
-  
+    }
 
-    },
-    type:{   
-        marginBottom:30,  
-        textAlign:'center',
-        fontSize:30,
-        fontWeight:700,
-        color:'#f6f9f2',
-        backgroundColor: '#362b52',
-        borderRadius:16 ,
-        justifyContent:'center',
+//     },
+//     type:{ 
+//         position: 'absolute',
+//         top: 8 ,
+//         marginBottom:30,  
+//         textAlign:'center',
+//         fontSize:30,
+//         fontWeight:700,
+//         color:'#f6f9f2',
+//         backgroundColor: '#362b52',
+//         borderRadius:16 ,
+//         justifyContent:'center',
        
-    },
-    loc:{
-        marginBottom:30,  
-        textAlign:'center',
-        fontSize:30,
-        fontWeight:700,
-        color:'#f6f9f2',
-        backgroundColor: '#362b52',
-        borderRadius:16 ,
-        justifyContent:'center',
-    },
-    sa_re:{
-        marginBottom:30,  
-        textAlign:'center',
-        fontSize:30,
-        fontWeight:700,
-        color:'#f6f9f2',
-        backgroundColor: '#362b52',
-        borderRadius:16 ,
-        justifyContent:'center',
-    }
-    ,
-    butt:{
-        marginBottom:30,  
-        textAlign:'center',
-        fontSize:30,
-        fontWeight:700,
-        color:'#f6f9f2',
-        backgroundColor: '#362b52',
-        borderRadius:16 ,
-        justifyContent:'center',
-    }
-    ,
+//     },
+//     loc:{
+//         marginBottom:30,  
+//         textAlign:'center',
+//         fontSize:30,
+//         fontWeight:700,
+//         color:'#f6f9f2',
+//         backgroundColor: '#362b52',
+//         borderRadius:16 ,
+//         justifyContent:'center',
+//         top: "50%",
+//         left:"50%",
+//   transform: translate('50% , 50%'),
+//     },
+//     sa_re:{
+//         marginBottom:30,  
+//         textAlign:'center',
+//         fontSize:30,
+//         fontWeight:700,
+//         color:'#f6f9f2',
+//         backgroundColor: '#362b52',
+//         borderRadius:16 ,
+//         justifyContent:'center',
+//     }
+//     ,
+//     butt:{
+//         marginBottom:30,  
+//         textAlign:'center',
+//         fontSize:30,
+//         fontWeight:700,
+//         color:'#f6f9f2',
+//         backgroundColor: '#362b52',
+//         borderRadius:16 ,
+//         justifyContent:'center',
+//     }
+//     ,
    
 
 });
@@ -77,13 +82,13 @@ const MediaCard = ({real_type, location, is_sale , is_rent }) => {
                         className={classes.media}
                         image={image} />
                     <CardContent>
-                        <Typography id="textt"  className={classes.type} gutterBottom >
-                           { real_type}
+                        <Typography id="textforT"  className={classes.type} gutterBottom >
+                           { real_type}Room
                        </Typography>
-                        <Typography  className={classes.loc} variant="body2" color="textSecondary" component="p">
+                        <Typography   id="textforL" className={classes.loc} variant="body2" color="textSecondary" component="p">
                            {location}
                        </Typography>
-                       <Typography  className={classes.sa_re} variant="body2" color="textSecondary" component="p">
+                       <Typography   id="textforis" className={classes.sa_re} variant="body2" color="textSecondary" component="p">
                        {
                     is_sale ?
                     "Sale"
@@ -92,7 +97,7 @@ const MediaCard = ({real_type, location, is_sale , is_rent }) => {
                        "Rent"
                 }
                        </Typography>
-                       <Button href="/"   className={classes.butt}  variant="contained" color="primary">
+                       <Button href="/"  id="textforB"  className={classes.butt}  variant="contained" color="primary">
                              More..
                         </Button>
                     </CardContent>

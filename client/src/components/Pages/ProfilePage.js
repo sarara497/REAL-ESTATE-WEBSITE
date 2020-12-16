@@ -5,7 +5,7 @@ import './HomeStyle.css'
 
 
 
-
+import UserReal_Estats from './Retrive_SpecUserRealEstate'
 import LogIn_Header from '../SharedComponents/LogIn_Header'
 import Footer from '../SharedComponents/Footer'
 import Search from '../SharedComponents/Search'
@@ -34,8 +34,15 @@ const ProfilePage = ({ username }) => {
                 <h4 className="wellcom"> The  Place Where You will Find All Real-Estate in Your Hands ♥ !</h4>
             </div>
             <div id="formation" >
-                <h1>Hello {username}</h1>
+            <br /><br />
+                <h1 id="username">Hello {username}</h1>
                 <br /><br />
+                <h3 id="forUser">Your Added Real-Estate :</h3>
+                <br /><br />
+
+                <div id="cardsPage">
+                    <UserReal_Estats/>
+                </div>
             </div>
                 <Footer />
 

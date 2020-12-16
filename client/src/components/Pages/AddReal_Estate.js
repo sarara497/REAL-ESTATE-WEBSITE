@@ -61,6 +61,7 @@ class AddReal_Estate extends React.Component {
         this.handleChange = this.handleChange.bind(this)
     }
     handleChange = (e) => {
+        console.log("here",e.target.checked)
         let { name, value } = e.target;
         this.setState({ [name]: value })
 
@@ -202,7 +203,7 @@ class AddReal_Estate extends React.Component {
                         </form>
                         <form id="Add2" >
                             <div>
-                                <input className="radio1" type="radio" id="male" onChange={this.handleChange} name="is_sale" value="true" />
+                                <input className="radio1" type="radio" id="male" onChange={!this.handleChange} name="is_sale" value="true" />
                                    &nbsp;<label id="lab" for="male">Sale</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                <input className="radio2" type="radio" id="female" onChange={this.handleChange} name="is_rent" value="true" />
                                    &nbsp;<label id="lab" for="female">Rent</label><br /><br />

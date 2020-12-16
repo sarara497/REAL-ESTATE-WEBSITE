@@ -245,3 +245,13 @@
     flex-direction: column !important;
     margin: auto !important;
   }
+
+  #username{
+      color: rgb(4, 4, 34);
+  }
+
+  
+  #forUser{
+    color: rgb(4, 4, 34);
+    margin-left: -800px  !important;
+}
