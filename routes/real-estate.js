@@ -99,12 +99,6 @@ router.get('/retrieveSpecReal-Estate/:id', async (req, res) => {
       }
 
       return res.status(200).json(specReal)
-      // if(specReal){
-      //   res.status(200).json(specReal)
-      // }
-      // else{
-      //   res.status(200).json("you didn't have any Real_Estate")
-      // }
     }})
   
      

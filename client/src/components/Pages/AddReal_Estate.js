@@ -9,7 +9,7 @@ import axios from "axios"
 import image from "../../../src/photo/forAdd.jpg"
 import logo from '../../../src/photo/logo.png'
 
-
+import IsRent from '../SharedComponents/IfIt_Rent'
 
 
 const styles = {
@@ -46,59 +46,64 @@ class AddReal_Estate extends React.Component {
             currency: '',
             real_type: '',
             area: '',
-            is_sale: false ,
-            is_rent: false ,
-            installment:false,
+            is_sale: false,
+            is_rent: false,
+            installment: false,
             rent_type: '',
             rent_dure: '',
-            description:'',
-            owner_phoneNumber:'',
-            full_Address:'',
-            id_User : localStorage.getItem("userId")
+            description: '',
+            owner_phoneNumber: '',
+            full_Address: '',
+            id_User: localStorage.getItem("userId")
         }
 
         this.handelOnClick = this.handelOnClick.bind(this)
         this.handleChange = this.handleChange.bind(this)
+        this.handelCallback=this.handelCallback.bind(this)
     }
     handleChange = (e) => {
-        console.log("here",e.target.checked)
+        console.log("here", e.target.checked)
         let { name, value } = e.target;
         this.setState({ [name]: value })
 
         console.log(value)
     }
 
+    handelCallback = (rentType , rentDure)=>{
+        this.setState({rent_type:rentType , rent_dure:rentDure})
+    }
 
-      handelOnClick = async (e) => {
+    handelOnClick = async (e) => {
         console.log(this.state)
-        e.preventDefault();  
+        e.preventDefault();
         axios.post('http://localhost:4000/real-estate/addReal_Estate', this.state,)
             .then((response) => {
                 console.log(response)
             })
-            this.setState({
-                location: '',
-                price: '',
-                lowest_price: '',
-                currency: '',
-                real_type: '',
-                area: '',
-                is_sale: false ,
-                is_rent: false ,
-                installment:false,
-                rent_type: '',
-                rent_dure: '',
-                description:'',
-                owner_phoneNumber:'',
-                full_Address:''
-            })
-    
-      }
+        this.setState({
+            location: '',
+            price: '',
+            lowest_price: '',
+            currency: '',
+            real_type: '',
+            area: '',
+            is_sale: false,
+            is_rent: false,
+            installment: false,
+            rent_type: '',
+            rent_dure: '',
+            description: '',
+            owner_phoneNumber: '',
+            full_Address: ''
+        })
+
+    }
 
 
 
     render() {
 
+        const { is_Rent } = this.state.is_rent
         return (
             <div id="logIn_bg" style={styles.paperContainer}>
                 <div id="Add">
@@ -207,8 +212,14 @@ class AddReal_Estate extends React.Component {
                                    &nbsp;<label id="lab" for="male">Sale</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                <input className="radio2" type="radio" id="female" onChange={this.handleChange} name="is_rent" value="true" />
                                    &nbsp;<label id="lab" for="female">Rent</label><br /><br />
-                                <input className="radio2" type="radio" id="installment" onChange={this.handleChange} name=" installment" value=" true" />
-                                      &nbsp;<label id="lab" for="installment">If you accept the installment system , put a check on this item.</label><br />
+                                {
+                                    this.state.is_rent ?
+                                        <IsRent isRentData = {this.handelCallback} />
+                                        :
+                                        <div>
+                                        <input className="radio2" type="radio" id="installment" onChange={this.handleChange} name=" installment" value=" true" />
+                                        &nbsp;<label id="lab" for="installment">If you accept the installment system , put a check on this item.</label><br /></div>
+                                }
                                 <br /><br />
                             </div>
                             <Button onClick={this.handelOnClick} id="forbuttonn" variant="contained" color="primary">
