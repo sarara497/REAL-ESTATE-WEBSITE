@@ -16,6 +16,7 @@ import Offices from './components/Pages/Real_EstateType/Offices'
 import Stores from './components/Pages/Real_EstateType/Stores'
 import Villas from './components/Pages/Real_EstateType/Villas'
 import Rooms from './components/Pages/Real_EstateType/Rooms'
+import MoreInfo from './components/Pages/MoreInfor'
 
 class App extends React.Component {
   constructor() {
@@ -77,6 +78,7 @@ class App extends React.Component {
           <Route path="/Stores" exact render={() => <Stores  userId={userId}/>} />
           <Route path="/Villas" exact render={() => <Villas  userId={userId}/>} />
           <Route path="/Rooms" exact render={() => <Rooms  userId={userId}/>} />
+          <Route path="/MoreInfo" exact render={() => <MoreInfo  userId={userId}/>} />
          
         </Switch>
 

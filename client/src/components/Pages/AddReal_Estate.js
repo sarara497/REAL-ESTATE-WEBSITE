@@ -14,7 +14,7 @@ import IsRent from '../SharedComponents/IfIt_Rent'
 
 const styles = {
     paperContainer: {
-        backgroundImage: `url(${image})`,
+        // backgroundImage: `url(${image})`,
         width: "100%",
         height: "100%"
     },

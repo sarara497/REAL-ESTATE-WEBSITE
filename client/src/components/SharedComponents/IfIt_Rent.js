@@ -7,7 +7,7 @@ import Select from '@material-ui/core/Select';
 const useStyles = makeStyles((theme) => ({
     formControl: {
         margin: theme.spacing(1),
-        minWidth: 140,
+        minWidth: 200,
     },
 }));
 
@@ -41,9 +41,9 @@ class IsRent extends React.Component {
     
     return (
         <div id="forisrent">
-            <div>
+            <div id="hh">
                 <FormControl className={useStyles.formControl}>
-                    <InputLabel htmlFor="grouped-native-select">Rent_Type</InputLabel>
+                    <InputLabel htmlFor="grouped-native-select">Rent_Type</InputLabel><br/>
                     <Select onChange={this.handleChange} name="rent_T" native defaultValue="" id="grouped-native-select">
                         <option aria-label="None" value="" />
                         <option value={1}>Long-term</option>
@@ -53,10 +53,12 @@ class IsRent extends React.Component {
                 </FormControl>
             </div>
                 <div  id="fordure">
-                   <form action="/action_page.php">
-                      <label for="quantity">Rent_Dure (in months):</label>
+               <div id="hh">  
+                <form action="/action_page.php">
+                 <label for="quantity"> Rent_Dure (in months): &nbsp;</label>
                       <input   onChange={this.handleChange} type="number" id="quantity" name="rent_D" min="1" max="60" />
                    </form>
+                   </div>
                 </div>
          
         </div>

@@ -12,6 +12,19 @@
 
 }
 
+
+#home_bgMore{
+    background-image:url(../../photo/ForMore.jpg) ;
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover; 
+     width:100% !important;
+     height:1000px !important; 
+     background-color: #3f51b500 !important;
+   
+ 
+ }
+
 #formation{
     margin-top: -30px !important;
     background-color: rgb(87 83 97) !important;
@@ -52,7 +65,7 @@
 }
 
 #forLogIn{
-    margin-left: -1 !important;
+    /* margin-left: -1 !important; */
     width: 42% !important;
     height: 800px !important;
     background-color: #bacfdd9e!important;
@@ -78,20 +91,21 @@
     font-size: medium;
     width: 40% !important;
     height: 55px !important;
-    margin-left: 70px;
+    /* margin-left: 70px; */
  }
 
 
-.MuiInputBase-root {
-    width: 90% !important;
+
+
+
+.MuiFormControl-root{
+    /* margin-left: 20% !important; */
+    width: 60% !important;
     height: 55px !important;
-    /* display: revert !important; */
 }
 
-
-
 #forTextArea{
-    width: 90% !important;
+    width: 60% !important;
     height: 55px !important;
     background-color: #bacfdd9e!important;
     font-size: large;
@@ -101,7 +115,7 @@
 #forget{
     color: rgb(51, 47, 47);
     margin-top: 8px !important;
-    margin-left: -180px !important;
+    margin-left: -30px !important;
 }
 
 #sign{
@@ -120,16 +134,17 @@
 
 #logoSi{
     background-size: cover;
-    width:40% !important;
-    height:160px !important;
+    width:30% !important;
+    height:140px !important;
     background-color: #424b7e00 !important; 
     margin-bottom: 20px;
     margin-top: 20px;
     
+    
 }
 
 .radio1{
-  margin-left: -150px;
+  /* margin-left: -150px; */
   height: 20px;
   width: 20px;
   background-color: #eee;
@@ -147,7 +162,7 @@
     /* margin-left: -100px; */
     font-size:23px;
     font-weight: 400;
-    color:  rgb(51, 47, 47);;
+    color:  rgba(51, 47, 47, 0.89);;
 }
 
 #Add{
@@ -161,13 +176,17 @@
 }
 #Add1{
    
-    width: 90% !important;
+    width: 80% !important;
     height: 700px !important;
     display:flex;
     flex-direction: row;
     margin: auto;
     margin-top: 20px;
-    margin-bottom: 20px;}
+    margin-bottom: 20px;
+    justify-content: center !important;
+    align-content: center !important;
+
+}
 
 #Add2{
    
@@ -175,12 +194,15 @@
     height: 500px !important;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: center !important;
   
 }
 #logoAdd{
     background-size: cover;
-    width:25% !important;
-    height:150px !important;
+    width:18% !important;
+    height:160px !important;
     background-color: #424b7e00 !important; 
     /* margin-bottom: 20px; */
     margin-top: 18px;
@@ -214,6 +236,17 @@
     text-align: center !important;
     color: rgba(249, 245, 253, 0.719) !important;
     font-family:serif !important;
+  
+    
+  }
+
+  .wellcom1{
+    font-size: 40px !important;
+    font-weight: 500 !important;
+    text-align: center !important;
+    color: rgb(255, 255, 255) !important;
+    font-family:serif !important;
+  
     
   }
 
@@ -251,3 +284,11 @@
     color: rgb(4, 4, 34);
     margin-left: -800px  !important;
 }
+
+
+ /* .MuiInputBase-root {
+    margin-left: 20% !important;
+    width: 60% !important;
+    height: 55px !important;
+    display: revert !important;
+}  */

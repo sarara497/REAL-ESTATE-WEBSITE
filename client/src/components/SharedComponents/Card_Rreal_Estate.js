@@ -15,64 +15,18 @@ const useStyles = makeStyles({
     media: {
         height: 320,
     }
-
-//     },
-//     type:{ 
-//         position: 'absolute',
-//         top: 8 ,
-//         marginBottom:30,  
-//         textAlign:'center',
-//         fontSize:30,
-//         fontWeight:700,
-//         color:'#f6f9f2',
-//         backgroundColor: '#362b52',
-//         borderRadius:16 ,
-//         justifyContent:'center',
-       
-//     },
-//     loc:{
-//         marginBottom:30,  
-//         textAlign:'center',
-//         fontSize:30,
-//         fontWeight:700,
-//         color:'#f6f9f2',
-//         backgroundColor: '#362b52',
-//         borderRadius:16 ,
-//         justifyContent:'center',
-//         top: "50%",
-//         left:"50%",
-//   transform: translate('50% , 50%'),
-//     },
-//     sa_re:{
-//         marginBottom:30,  
-//         textAlign:'center',
-//         fontSize:30,
-//         fontWeight:700,
-//         color:'#f6f9f2',
-//         backgroundColor: '#362b52',
-//         borderRadius:16 ,
-//         justifyContent:'center',
-//     }
-//     ,
-//     butt:{
-//         marginBottom:30,  
-//         textAlign:'center',
-//         fontSize:30,
-//         fontWeight:700,
-//         color:'#f6f9f2',
-//         backgroundColor: '#362b52',
-//         borderRadius:16 ,
-//         justifyContent:'center',
-//     }
-//     ,
-   
-
 });
 
 
-const MediaCard = ({ location, is_sale , is_rent , real_type }) => { 
+const MediaCard = ({ _id , location, is_sale , is_rent , real_type }) => { 
     console.log("iam in card" , real_type )
+    console.log("id" , _id)
     const classes = useStyles();
+  
+   const  CardId=()=>{
+    localStorage.setItem("CardId" , _id)
+   } 
+
     return (
         <span id="rootDiv">
             <Card   id="ccard" >
@@ -97,7 +51,7 @@ const MediaCard = ({ location, is_sale , is_rent , real_type }) => {
                        "Rent"
                 }
                        </Typography>
-                       <Button href="/"  id="textforB"  className={classes.butt}  variant="contained" color="primary">
+                       <Button href="/MoreInfo" onClick={CardId} id="textforB"  className={classes.butt}  variant="contained" color="primary">
                              More..
                         </Button>
                     </CardContent>
