@@ -8,6 +8,13 @@ import LogIn from './components/Pages/LogIn'
 import SignUp from './components/Pages/SignUp'
 import AddReal_Estate from './components/Pages/AddReal_Estate'
 import Profile from './components/Pages/ProfilePage'
+import Houses from './components/Pages/Real_EstateType/Houses'
+import Apartments from './components/Pages/Real_EstateType/Apartments'
+import Building from './components/Pages/Real_EstateType/Building'
+import Lands from './components/Pages/Real_EstateType/Lands'
+import Offices from './components/Pages/Real_EstateType/Offices'
+import Stores from './components/Pages/Real_EstateType/Stores'
+import Villas from './components/Pages/Real_EstateType/Villas'
 
 class App extends React.Component {
   constructor() {
@@ -60,7 +67,14 @@ class App extends React.Component {
           <Route path="/Profile" exact render={() => <Profile username={username} />} />
           <Route path="/SignUp" exact render={() => <SignUp />} />
           <Route path="/AddReal_Estate" exact render={() =>  userId ?
-            <AddReal_Estate userId={userId} /> : <Redirect to='/LogIn' />} />
+          <AddReal_Estate userId={userId} /> : <Redirect to='/LogIn' />} />
+          <Route path="/Building" exact render={() => <Building   userId={userId}/>} />
+          <Route path="/Houses" exact render={() => <Houses  userId={userId}/>} />
+          <Route path="/Apartments" exact render={() => <Apartments  userId={userId}/>} />
+          <Route path="/Lands" exact render={() => <Lands  userId={userId}/>} />
+          <Route path="/Offices" exact render={() => <Offices  userId={userId}/>} />
+          <Route path="/Stores" exact render={() => <Stores  userId={userId}/>} />
+          <Route path="/Villas" exact render={() => <Villas  userId={userId}/>} />
          
         </Switch>
 

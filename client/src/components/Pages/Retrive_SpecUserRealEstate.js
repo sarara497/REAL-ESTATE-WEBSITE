@@ -43,10 +43,10 @@ class UserReal_Estats extends Component {
                 real_estates.length ?
 
                  real_estates.map(({ real_type, location, is_sale , is_rent}, index) =>
-                   <Card type={real_type} location={location} is_sale={is_sale} is_rent={is_rent}  key={index} />
+                   <Card real_type={real_type} location={location} is_sale={is_sale} is_rent={is_rent}  key={index} />
                 )
                 :
-                <h1>You dont Have any real estate</h1>
+                <h1 id="username">You dont Have any real estate</h1>
             
               }
   

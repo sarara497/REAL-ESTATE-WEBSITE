@@ -70,8 +70,8 @@ const useStyles = makeStyles({
 });
 
 
-const MediaCard = ({real_type, location, is_sale , is_rent }) => { 
-    console.log("iam in card")
+const MediaCard = ({ location, is_sale , is_rent , real_type }) => { 
+    console.log("iam in card" , real_type )
     const classes = useStyles();
     return (
         <span id="rootDiv">
@@ -83,7 +83,7 @@ const MediaCard = ({real_type, location, is_sale , is_rent }) => {
                         image={image} />
                     <CardContent>
                         <Typography id="textforT"  className={classes.type} gutterBottom >
-                           { real_type}Room
+                           { real_type}
                        </Typography>
                         <Typography   id="textforL" className={classes.loc} variant="body2" color="textSecondary" component="p">
                            {location}

@@ -29,16 +29,19 @@ class Real_Estats extends Component {
     }
   
     render() {
-      
+     
       const { real_estate } = this.state
+      console.log("real" , real_estate)
   
       return (
           <div id="cardsPage">
            <div id="cPage" >      
             <div  id="cardsPage">
               {
-                real_estate.map(({ real_type, location, is_sale , is_rent}, index) =>
-                  <Card type={real_type} location={location} is_sale={is_sale} is_rent={is_rent}  key={index} />
+          
+                real_estate.map(({ location, is_sale , is_rent , real_type}, index) =>
+               
+                  <Card location={location} is_sale={is_sale} is_rent={is_rent}  real_type={real_type} key={index} />
                 )
               }
   
