@@ -36,18 +36,19 @@ export default function LogInButtonAppBar() {
 
                     <img id="logo" src={logo} />
 
-                    <div id="forNav">
+                    <div id="forNav1">
                     <Button  href='/' id="forbtnH" color="inherit">All&nbsp;</Button>
                         <Button href="/Building" id="forbtnH" color="inherit">Building&nbsp;</Button>
                         <Button href="/Houses" id="forbtnH" color="inherit">Houses&nbsp;</Button>
                         <Button href="/Villas" id="forbtnH" color="inherit">Villas&nbsp;</Button>
                         <Button  href="/Apartments" id="forbtnH" color="inherit">Apartments&nbsp;</Button>
+                        <Button href="/Rooms" id="forbtnH" color="inherit">Rooms&nbsp;</Button>
                         <Button href="/Stores" id="forbtnH" color="inherit">Stores&nbsp;</Button>
                         <Button href="/Offices" id="forbtnH" color="inherit">Offices&nbsp;</Button>
                         <Button href="/Lands" id="forbtnH" color="inherit">Lands&nbsp;</Button>
 
                     </div>
-                    <div id="forNav">
+                    <div id="forNav1">
                         <Button href="/AddReal_Estate" id="forAdd" color="inherit">Add Real-Estate&nbsp;</Button>
                         <Button
                             href="/"

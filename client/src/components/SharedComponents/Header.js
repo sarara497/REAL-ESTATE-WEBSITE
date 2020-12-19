@@ -42,6 +42,8 @@ export default function ButtonAppBar() {
                         <Button href="/Houses" id="forbtnH" color="inherit">Houses&nbsp;</Button>
                         <Button href="/Villas" id="forbtnH" color="inherit">Villas&nbsp;</Button>
                         <Button  href="/Apartments" id="forbtnH" color="inherit">Apartments&nbsp;</Button>
+                        <Button href="/Rooms" id="forbtnH" color="inherit">Rooms&nbsp;</Button>
+                      
                         <Button href="/Stores" id="forbtnH" color="inherit">Stores&nbsp;</Button>
                         <Button href="/Offices" id="forbtnH" color="inherit">Offices&nbsp;</Button>
                         <Button href="/Lands" id="forbtnH" color="inherit">Lands&nbsp;</Button>
