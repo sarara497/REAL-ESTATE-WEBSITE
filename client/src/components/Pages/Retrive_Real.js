@@ -24,7 +24,7 @@ class Real_Estats extends Component {
         .then(response => response.json())
         .then(data => {
           this.setState({ real_estate : data })
-          console.log(data)
+          console.log("real",this.state.real_estate)
         })
     }
   

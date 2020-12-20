@@ -14,7 +14,7 @@ import IsRent from '../SharedComponents/IfIt_Rent'
 
 const styles = {
     paperContainer: {
-        // backgroundImage: `url(${image})`,
+        backgroundImage: `url(${image})`,
         width: "100%",
         height: "100%"
     },
@@ -54,6 +54,7 @@ class AddReal_Estate extends React.Component {
             description: '',
             owner_phoneNumber: '',
             full_Address: '',
+            photo:[],
             id_User: localStorage.getItem("userId")
         }
 
@@ -94,16 +95,28 @@ class AddReal_Estate extends React.Component {
             rent_dure: '',
             description: '',
             owner_phoneNumber: '',
-            full_Address: ''
+            full_Address: '',
+            photo:[]
         })
 
     }
 
+    // UploadePhoto = ()=>{
+    //     console.log("Files photo" , this.state.photo)
+    //     const formData = new FormData()
+    //     formData.append("file" , this.state.photo)
+    //     formData.append("Photo_RealEstate" , "Real_Estate_Photos")
+
+    //     axios.post("https://api.cloudinary.com/v1_1/dpycouy53/image/upload" , formData).then((response)=>{
+    //         console.log("response the photo : " , response)
+    //     })
+    // }
 
 
     render() {
 
         const { is_Rent } = this.state.is_rent
+        const photo = this.state.photo
         return (
             <div id="logIn_bg" style={styles.paperContainer}>
                 <div id="Add">
@@ -146,17 +159,18 @@ class AddReal_Estate extends React.Component {
                                 variant="outlined"
                             />
                             <br />
-                            <Button id="forbuttonn" variant="contained" color="primary">
+                           {/* <input
+                                 type="file" 
+                                 onChange={(event)=>{
+                                   this.setState({[photo]:event.target.files[0]})}}
+                                 name="photo"
+                                class="custom-file-input"
+                                   multiple=""
+                                    id="photo" /><br/><br/>
+                                <Button id="forbuttonn" onClick={this.UploadePhoto} variant="contained" color="primary">
+                           Add Photo </Button> */}
 
-
-                                <input type="file" name="images[]" class="custom-file-input" multiple="" id="images" />
-                                <label class="custom-file-label" for="images" data-browse="Photos">Photos</label>
-
-                                <div class="row">
-                                    <div id="image-holder" class="col-sm-12 m-2"></div>
-                                </div>
-
-                            </Button>
+                          
                         </form>
                         <form id="Add2" >
                             <TextField

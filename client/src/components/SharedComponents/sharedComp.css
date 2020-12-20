@@ -31,6 +31,16 @@
 
 #forh{
     background-color: rgb(87 83 97) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    color: ivory;
+
+}
+
+.makeStyles-grow-5 {
+    margin-top: -280px !important;
+    margin-bottom: 200px !important;
+    background-size: contain !important;
 
 }
 
@@ -244,4 +254,10 @@ height: 320px !important;
 
 #hh{
     width: inherit !important;
+}
+
+#forSearch{
+    margin-top:-280px !important ;
+    margin-bottom: 200px !important;
+    align-items: center !important;
 }
