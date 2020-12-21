@@ -73,7 +73,7 @@ class MoreInfo extends Component {
                     <h4 className="wellcom1"> The  Place Where You will Find All Real-Estate in Your Hands ♥ !</h4>
 
                 </div>
-                {/* <Search /> */}
+                <Search />
                 <div id="forh" >
                     <h1>More Information</h1>
                     <h3>The Real_Estate Type : &nbsp; {real_estates.real_type}</h3>
