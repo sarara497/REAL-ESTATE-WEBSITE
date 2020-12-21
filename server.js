@@ -34,9 +34,7 @@ app.use(cors())
 app.use('/users' , require('./routes/user'))
 app.use('/real-estate' , require('./routes/real-estate'))
 
-app.use((req,res) => {
-    res.send('Welcome to Backend')
-})
+
 
 if(process.env.NODE_ENV === 'production'){
   app.use(express.static('client/build'))
@@ -46,4 +44,9 @@ if(process.env.NODE_ENV === 'production'){
     })
 }
 
+app.use((req,res) => {
+  res.send('Welcome to Backend')
+})
+
 app.listen(process.env.PORT || 4000 , ()=> console.log("iam running on port 4000"))
+
