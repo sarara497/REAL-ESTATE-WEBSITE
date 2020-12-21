@@ -3,10 +3,10 @@ const mongoose = require('mongoose')
 const cors = require('cors')
 const dotenv = require("dotenv");
 dotenv.config();
-const path = require('path')
+const path = require('path')//first step for deployment
 
 // Connecting with my MongoDB
-mongoose.connect(process.env.MONGODB_URI || process.env.DB_CONNECT,
+mongoose.connect(process.env.MONGODB_URI || process.env.DB_CONNECT,//fourth step
     {
       useNewUrlParser: true, useUnifiedTopology: true,
       useCreateIndex: true, useFindAndModify: false
@@ -36,7 +36,7 @@ app.use('/real-estate' , require('./routes/real-estate'))
 
 
 
-if(process.env.NODE_ENV === 'production'){
+if(process.env.NODE_ENV === 'production'){ //third step
   app.use(express.static('client/build'))
 
   app.get("*", (req, res) => {
@@ -48,5 +48,5 @@ app.use((req,res) => {
   res.send('Welcome to Backend')
 })
 
-app.listen(process.env.PORT || 4000 , ()=> console.log("iam running on port 4000"))
+app.listen(process.env.PORT || 4000 , ()=> console.log("iam running on port 4000"))//second step
 
