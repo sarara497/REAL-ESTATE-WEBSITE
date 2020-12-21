@@ -257,7 +257,61 @@ height: 320px !important;
 }
 
 #forSearch{
-    margin-top:-280px !important ;
-    margin-bottom: 200px !important;
+    margin-top:-80px !important ;
+    margin-bottom: 10px !important;
     align-items: center !important;
+    width:60ch !important;
+    margin-left: 500px !important;
+    justify-content: center !important;
 }
+
+#forSearchIcon{
+    background-color:rgba(252, 252, 247, 0)!important;
+    width: 15% !important;
+    height: 60px !important;
+    /* border-radius: 1ch !important; */
+    /* border:lawngreen !important; */
+}
+
+#forSearchIcon:hover{
+    background-color:rgba(4, 5, 54, 0.432)!important;
+}
+.makeStyles-searchIcon-6{
+    width: 10px !important;
+}
+
+.MuiInputBase-input{
+    font: inherit;
+    color: currentColor;
+    width: 154%;
+    /* border: 0; */
+    height: 2em;
+    margin: 0;
+    display: block;
+    padding: 6px 6px 0 7px  !important;
+    min-width: 0;
+    background: none;
+    box-sizing: content-box;
+    animation-name: mui-auto-fill-cancel;
+    letter-spacing: inherit;
+    animation-duration: 10ms;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.MuiInputBase-root {
+    color: rgba(0, 0, 0, 0.87);
+    cursor: text;
+    /* display: inline-flex; */
+    position: relative;
+    font-size: 1.5rem !important;
+    box-sizing: border-box;
+    align-items: center;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 400;
+    line-height: 1.1876em;
+    letter-spacing: 0.00938em;
+    width: 30ch !important;
+}
+
+.MuiInputBase-input:hover{
+    background-color:rgba(226, 226, 236, 0.432)!important;}
