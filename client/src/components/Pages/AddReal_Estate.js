@@ -46,8 +46,7 @@ class AddReal_Estate extends React.Component {
             currency: '',
             real_type: '',
             area: '',
-            is_sale: false,
-            is_rent: false,
+            isFor:'',
             installment: false,
             rent_type: '',
             rent_dure: '',
@@ -60,7 +59,7 @@ class AddReal_Estate extends React.Component {
 
         this.handelOnClick = this.handelOnClick.bind(this)
         this.handleChange = this.handleChange.bind(this)
-        this.handelCallback=this.handelCallback.bind(this)
+        
     }
     handleChange = (e) => {
         console.log("here", e.target.checked)
@@ -68,10 +67,6 @@ class AddReal_Estate extends React.Component {
         this.setState({ [name]: value })
 
         console.log(value)
-    }
-
-    handelCallback = (rentType , rentDure)=>{
-        this.setState({rent_type:rentType , rent_dure:rentDure})
     }
 
     handelOnClick = async (e) => {
@@ -88,8 +83,7 @@ class AddReal_Estate extends React.Component {
             currency: '',
             real_type: '',
             area: '',
-            is_sale: false,
-            is_rent: false,
+            isFor:'',
             installment: false,
             rent_type: '',
             rent_dure: '',
@@ -99,6 +93,12 @@ class AddReal_Estate extends React.Component {
             photo:[]
         })
 
+    }
+    getRent = (data)=>{
+         this.setState({
+            rent_type :data.rent_T,
+            rent_dure:data.rent_D
+        })
     }
 
     // UploadePhoto = ()=>{
@@ -115,8 +115,12 @@ class AddReal_Estate extends React.Component {
 
     render() {
 
-        const { is_Rent } = this.state.is_rent
+        var isRent = false
+        const {isFor} = this.state.isFor
         const photo = this.state.photo
+        if(this.state.isFor === 'Rent'){
+            isRent=true
+        }
         return (
             <div id="logIn_bg" style={styles.paperContainer}>
                 <div id="Add">
@@ -222,13 +226,13 @@ class AddReal_Estate extends React.Component {
                         </form>
                         <form id="Add2" >
                             <div>
-                                <input className="radio1" type="radio" id="male" onChange={!this.handleChange} name="is_sale" value="true" />
-                                   &nbsp;<label id="lab" for="male">Sale</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                               <input className="radio2" type="radio" id="female" onChange={this.handleChange} name="is_rent" value="true" />
-                                   &nbsp;<label id="lab" for="female">Rent</label><br /><br />
+                                <input className="radio1" type="radio" id="sale" onChange={!this.handleChange} name="isFor" value="Sale" />
+                                   &nbsp;<label id="lab" for="sale">Sale</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                               <input className="radio2" type="radio" id="rent" onChange={this.handleChange} name="isFor" value="Rent" />
+                                   &nbsp;<label id="lab" for="rent">Rent</label><br /><br />
                                 {
-                                    this.state.is_rent ?
-                                        <IsRent isRentData = {this.handelCallback} />
+                                   isRent ?
+                                        <IsRent getRent={this.getRent}/>
                                         :
                                         <div>
                                         <input className="radio2" type="radio" id="installment" onChange={this.handleChange} name=" installment" value=" true" />

@@ -28,12 +28,8 @@ const Userr = mongoose.Schema({
     phoneNumber: {
         type: String
     },
-
-    isAdmin: {
-        type: Boolean
-    },
-    isOffice: {
-        type: Boolean
+    userType: {
+        type: String
     },
     isUser: {
         type: Boolean

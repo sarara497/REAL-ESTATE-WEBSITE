@@ -27,12 +27,8 @@ const RealEstate = mongoose.Schema({
         type: String,
         required: true,
     },
-    is_sale: {
-        type: Boolean,
-      
-    },
-    is_rent: {
-        type: Boolean,
+    isFor: {
+      type: String,
       
     },
     installment: {

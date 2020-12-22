@@ -79,8 +79,8 @@ class Stores extends Component {
                                 {
                                     real_estates.length ?
 
-                                        real_estates.map(({ real_type, location, is_sale, is_rent }, index) =>
-                                            <Card real_type={real_type} location={location} is_sale={is_sale} is_rent={is_rent} key={index} />
+                                        real_estates.map(({ real_type, location, isFor }, index) =>
+                                            <Card real_type={real_type} location={location} isFor={isFor}  key={index} />
                                         )
                                         :
                                         <h1 id="username">There Is No Stores</h1>

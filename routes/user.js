@@ -15,9 +15,7 @@ router.get('/auth', auth, (req, res) => {
         username: req.user.username,
         email: req.user.email,
         isAdmin: req.user.isAdmin,
-        isOffice: req.user.isOffice,
-        isUser: req.user.isUser,
-        
+        userType:req.user.userType,
         success: true
     })
 })
@@ -40,8 +38,7 @@ router.post('/signupUser', async (req, res) => {
         password: hashPassword,
         phoneNumber: req.body.phoneNumber,
         isAdmin: false,
-        isOffice: req.body.isOffice,
-        isUser: req.body.isUser,
+        userType: req.body.userType,
     });
 
     try {
@@ -49,7 +46,7 @@ router.post('/signupUser', async (req, res) => {
         const savedUser = await user.save();
         const token = await jwt.sign({ _id: user._id }, process.env.TOKEN);
         res.header("Token", token)
-        res.json({ token, userId: savedUser._id })
+        res.json({ token, userId: savedUser._id , userType: savedUser.userType })
 
     }
     catch (err) {
@@ -71,7 +68,7 @@ router.post('/signInUser', async (req, res) => {
 
         if (match) {
             const token = await jwt.sign({ _id: user._id }, 'secret') // generate token in password match
-            res.header('Token', token).status(201).json({ success: true, token, isAdmin: user.isAdmin, isUser: user.isUser, isOffice: user.isOffice ,userId:user._id , username : user.username }) // sending token as a res and header
+            res.header('Token', token).status(201).json({ success: true, token, isAdmin: user.isAdmin, userType: user.userType ,userId:user._id , username : user.username }) // sending token as a res and header
         }
         else{
             console.log("your Password wrong")

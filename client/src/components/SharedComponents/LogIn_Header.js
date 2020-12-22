@@ -53,10 +53,9 @@ export default function LogInButtonAppBar() {
                         <Button
                             href="/"
                             id="forLogout"
-                            onClick={() => {
-                                localStorage.removeItem('isUser')    
+                            onClick={() => {    
                                 localStorage.removeItem('isAdmin')
-                                localStorage.removeItem('isOffice')
+                                localStorage.removeItem('userType')
                                 localStorage.removeItem('userId')
                                 localStorage.removeItem('Token') 
                             }}

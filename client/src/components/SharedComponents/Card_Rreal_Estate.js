@@ -18,8 +18,8 @@ const useStyles = makeStyles({
 });
 
 
-const MediaCard = ({ _id , location, is_sale , is_rent , real_type }) => { 
-    console.log("iam in card" , real_type )
+const MediaCard = ({ _id , location, isFor , real_type }) => { 
+    console.log("iam in card" , real_type , 'for' , isFor )
     console.log("id" , _id)
     const classes = useStyles();
   
@@ -43,13 +43,7 @@ const MediaCard = ({ _id , location, is_sale , is_rent , real_type }) => {
                            {location}
                        </Typography>
                        <Typography   id="textforis" className={classes.sa_re} variant="body2" color="textSecondary" component="p">
-                       {
-                    is_sale ?
-                    "Sale"
-                     
-                        :
-                       "Rent"
-                }
+                       {isFor}
                        </Typography>
                        <Button href="/MoreInfo" onClick={CardId} id="textforB"  className={classes.butt}  variant="contained" color="primary">
                              More..

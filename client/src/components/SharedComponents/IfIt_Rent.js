@@ -21,18 +21,15 @@ class IsRent extends React.Component {
         }
 
         this.handleChange = this.handleChange.bind(this)
-        this.obTrigger=this.obTrigger.bind(this)
-    }
-
-    obTrigger = (e)=>{
-        this.props.isRentData(this.state)
-        e.preventDefault()
+        
     }
 
     handleChange = (e) => {
-        console.log("here", e.target.checked)
+        console.log("here", e.target)
         let { name, value } = e.target;
         this.setState({ [name]: value })
+        var data= this.state
+        this.props.getRent(data)
 
         console.log(value)
     }
@@ -46,8 +43,8 @@ class IsRent extends React.Component {
                     <InputLabel htmlFor="grouped-native-select">Rent_Type</InputLabel><br/>
                     <Select onChange={this.handleChange} name="rent_T" native defaultValue="" id="grouped-native-select">
                         <option aria-label="None" value="" />
-                        <option value={1}>Long-term</option>
-                        <option value={2}>Short-term</option>
+                        <option value={'Long-term'}>Long-term</option>
+                        <option value={'Short-term'}>Short-term</option>
 
                     </Select>
                 </FormControl>

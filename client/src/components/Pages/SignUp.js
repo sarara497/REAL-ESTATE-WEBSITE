@@ -42,13 +42,10 @@ class SignUp extends React.Component {
             email: '',
             phoneNumber: '',
             password: '',
-            isUser:false,
-            isOffice:false
-
+            userType: '',
         }
         this.handelOnClick = this.handelOnClick.bind(this)
         this.handleChange = this.handleChange.bind(this)
-        this.handleChangeRadio = this.handleChangeRadio.bind(this)
     }
     handleChange = (e) => {
         let { name, value } = e.target;
@@ -56,14 +53,6 @@ class SignUp extends React.Component {
 
         console.log(value)
     }
-    handleChangeRadio = (e) => {
-        
-        let { name, value } = e.target;
-        this.setState({ [name]: !value })
-
-        console.log(value)
-    }
-
     handelOnClick = async (e) => {
         console.log(this.state)
         e.preventDefault();
@@ -72,6 +61,8 @@ class SignUp extends React.Component {
                 console.log(response)
                 localStorage.setItem('Token', response.data.token)
                 localStorage.setItem('userId', response.data.userId)
+                localStorage.setItem('username', response.data.username)
+                localStorage.setItem('userType', response.data.userType)
 
             })
         this.setState({
@@ -79,8 +70,7 @@ class SignUp extends React.Component {
             email: '',
             phoneNumber: '',
             password: '',
-            isUser:false,
-            isOffice:false
+            //foruserType
         })
     }
 
@@ -132,11 +122,13 @@ class SignUp extends React.Component {
 
                         </div>
                         <br />
-                        <input className="radio1" type="radio" id="user" onChange={this.handleChangeRadio} name="isUser" value="true" />
-                        &nbsp;<label id="lab" for="male">User</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <input className="radio2" type="radio" id="office" onChange={this.handleChangeRadio} name="isOffice" value="true" />
-                                &nbsp;<label id="lab" for="female">Office</label><br /><br />
-                        <Button id="forbutton"  onClick={this.handelOnClick} variant="contained" color="primary">
+                        <input className="radio1" type="radio" id="user" onChange={this.handleChange} name="userType" value="User" />
+                        &nbsp;<label id="lab" for="user">User</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                                <input className="radio2" type="radio" id="office" onChange={this.handleChange} name="userType" value="Office" />
+                                &nbsp;<label id="lab" for="office">Office</label><br /><br />
+                                
+                        <Button id="forbutton" onClick={this.handelOnClick} variant="contained" color="primary">
                             SignUp
                         </Button>
                         <br />

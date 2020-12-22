@@ -25,8 +25,7 @@ class App extends React.Component {
 
       email: "",
       isAdmin: localStorage.getItem('isAdmin'),
-      isOffice: localStorage.getItem('isOffice'),
-      isUser: localStorage.getItem('isUser'),
+      userType: localStorage.getItem('userType'),
       userId: localStorage.getItem('userId'),
       username: localStorage.getItem('username')
     }
@@ -47,10 +46,9 @@ class App extends React.Component {
       .then(response => response.json())
       .then(data => {
         console.log(data)
-        this.setState({email: data.email, isAdmin: data.isAdmin, isOffice: data.isOffice, isUser: data.isUser })
-        // console.log(this.state.isAdmin)
-        // console.log(this.state.isOffice)
-        // console.log(this.state.isUser)
+        this.setState({email: data.email, isAdmin: data.isAdmin, userType: data.userType })
+        console.log("isAdmin" , this.state.isAdmin)
+        console.log("type" , this.state.userType)
       })
   }
 

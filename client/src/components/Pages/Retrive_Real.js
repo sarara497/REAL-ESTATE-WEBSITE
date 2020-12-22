@@ -39,9 +39,9 @@ class Real_Estats extends Component {
             <div  id="cardsPage">
               {
           
-                real_estate.map(({_id , location, is_sale , is_rent , real_type}, index) =>
+                real_estate.map(({_id , location, isFor , real_type}, index) =>
                
-                  <Card _id={_id} location={location} is_sale={is_sale} is_rent={is_rent}  real_type={real_type} key={index} />
+                  <Card _id={_id} location={location}  isFor={isFor}  real_type={real_type} key={index} />
                 )
               }
   
