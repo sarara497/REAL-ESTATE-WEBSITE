@@ -20,7 +20,7 @@ class Real_Estats extends Component {
         method: 'GET',
         headers: { 'Content-Type': 'application/json' },
       };
-      fetch('http://localhost:4000/real-estate/retrieveReal-Estate', requestOptions)
+      fetch('https://mernrealestateproject.herokuapp.com/real-estate/retrieveReal-Estate', requestOptions)
         .then(response => response.json())
         .then(data => {
           this.setState({ real_estate : data })

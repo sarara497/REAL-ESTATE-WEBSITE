@@ -67,7 +67,7 @@ class SignUp extends React.Component {
     handelOnClick = async (e) => {
         console.log(this.state)
         e.preventDefault();
-        axios.post('http://localhost:4000/users/signupUser', this.state)
+        axios.post('https://mernrealestateproject.herokuapp.com/users/signupUser', this.state)
             .then((response) => {
                 console.log(response)
                 localStorage.setItem('Token', response.data.token)

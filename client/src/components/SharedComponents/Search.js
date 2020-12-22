@@ -89,7 +89,7 @@ class Search extends Component {
       headers: { 'Content-Type': 'application/json' },
 
     };
-    fetch(`http://localhost:4000/real-estate/retrieveRealbyLocation-Estate/${this.state.search}`, requestOptions)
+    fetch(`https://mernrealestateproject.herokuapp.com/real-estate/retrieveRealbyLocation-Estate/${this.state.search}`, requestOptions)
       .then(response => response.json())
       .then(data => {
         this.setState({ real_estates: data })

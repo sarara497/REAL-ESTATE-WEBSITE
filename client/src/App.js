@@ -43,7 +43,7 @@ class App extends React.Component {
       }
 
     };
-    fetch('/users/auth', requestOptions)
+    fetch('https://mernrealestateproject.herokuapp.com/users/auth', requestOptions)
       .then(response => response.json())
       .then(data => {
         console.log(data)

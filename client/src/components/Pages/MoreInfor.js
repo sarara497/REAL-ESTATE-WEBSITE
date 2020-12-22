@@ -43,7 +43,7 @@ class MoreInfo extends Component {
             headers: { 'Content-Type': 'application/json' },
 
         };
-        fetch(`http://localhost:4000/real-estate/retrieveReal-Estate/${this.state.card_id}`, requestOptions)
+        fetch(`https://mernrealestateproject.herokuapp.com/real-estate/retrieveReal-Estate/${this.state.card_id}`, requestOptions)
             .then(response => response.json())
             .then(data => {
                 this.setState({ real_estates: data })

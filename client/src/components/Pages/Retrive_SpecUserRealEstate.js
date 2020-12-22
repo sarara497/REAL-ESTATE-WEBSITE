@@ -22,7 +22,7 @@ class UserReal_Estats extends Component {
         headers: { 'Content-Type': 'application/json' },
      
       };
-      fetch(`http://localhost:4000/real-estate/retrieveSpecReal-Estate/${this.state.id_User}` , requestOptions )
+      fetch(`https://mernrealestateproject.herokuapp.com/real-estate/retrieveSpecReal-Estate/${this.state.id_User}` , requestOptions )
         .then(response => response.json())
         .then(data => {
           this.setState({ real_estates : data })

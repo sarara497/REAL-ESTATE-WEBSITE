@@ -44,7 +44,7 @@ class Offices extends Component {
             headers: { 'Content-Type': 'application/json' },
 
         };
-        fetch(`http://localhost:4000/real-estate/retrieveSpecTypeReal-Estate/${this.state.type}`, requestOptions)
+        fetch(`https://mernrealestateproject.herokuapp.com/real-estate/retrieveSpecTypeReal-Estate/${this.state.type}`, requestOptions)
             .then(response => response.json())
             .then(data => {
                 this.setState({ real_estates: data })

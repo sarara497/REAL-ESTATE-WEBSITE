@@ -77,7 +77,7 @@ class AddReal_Estate extends React.Component {
     handelOnClick = async (e) => {
         console.log(this.state)
         e.preventDefault();
-        axios.post('http://localhost:4000/real-estate/addReal_Estate', this.state,)
+        axios.post('https://mernrealestateproject.herokuapp.com/real-estate/addReal_Estate', this.state,)
             .then((response) => {
                 console.log(response)
             })
