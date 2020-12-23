@@ -23,6 +23,7 @@ router.post('/addReal_Estate', async (req, res) => {
     full_Address: req.body.full_Address,
     description: req.body.description,
     owner_phoneNumber: req.body.owner_phoneNumber,
+    imageUrl:req.body.imageUrl,
     user_id: req.body.id_User
   })
 

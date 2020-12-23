@@ -12,6 +12,7 @@ import logo from '../../../src/photo/logo.png'
 import IsRent from '../SharedComponents/IfIt_Rent'
 
 
+
 const styles = {
     paperContainer: {
         backgroundImage: `url(${image})`,
@@ -53,12 +54,14 @@ class AddReal_Estate extends React.Component {
             description: '',
             owner_phoneNumber: '',
             full_Address: '',
-            photo:[],
+            image:null,
+            imageUrl:null,
             id_User: localStorage.getItem("userId")
         }
 
         this.handelOnClick = this.handelOnClick.bind(this)
         this.handleChange = this.handleChange.bind(this)
+        this. UploadePhoto=this. UploadePhoto.bind(this)
         
     }
     handleChange = (e) => {
@@ -90,7 +93,8 @@ class AddReal_Estate extends React.Component {
             description: '',
             owner_phoneNumber: '',
             full_Address: '',
-            photo:[]
+            image:null,
+            imageUrl:null,
         })
 
     }
@@ -102,16 +106,45 @@ class AddReal_Estate extends React.Component {
     }
 
     // UploadePhoto = ()=>{
-    //     console.log("Files photo" , this.state.photo)
+    //     console.log("Files image" , this.state.image)
     //     const formData = new FormData()
-    //     formData.append("file" , this.state.photo)
+    //     formData.append("file" , this.state.image)
     //     formData.append("Photo_RealEstate" , "Real_Estate_Photos")
+    //     formData.append('cloud_name', 'dpycouy53');
 
-    //     axios.post("https://api.cloudinary.com/v1_1/dpycouy53/image/upload" , formData).then((response)=>{
-    //         console.log("response the photo : " , response)
-    //     })
+        
+    //     axios.post('https://api.cloudinary.com/v1_1/dpycouy53/image/upload', formData)
+    //         .then(response =>{
+    //             console.log("response the photo : " ,response.data)
+    //             this.setState({imageUrl: response.data.secure_url})
+    //         } )
+           
     // }
 
+
+    UploadePhoto = async () => {
+        console.log("Files image" , this.state.image)
+        const formData = new FormData()
+        formData.append("file" , this.state.image)
+        formData.append("Photo_RealEstate" , "Real_Estate_Photos")
+
+        const res = await fetch('https://api.cloudinary.com/v1_1/dpycouy53/image/upload', {
+          method: 'POST',
+          body: formData
+        });
+        const file = await res.json();
+        console.log("response the photo : ",file);
+        this.setState({
+            imageUrl: file.secure_url
+        })
+      }
+
+    // updaterealimage =(obj)=>{
+    //     axios.post('' , obj)
+    //     .then((response)=>{
+    //         console.log("res" , response.data)
+    //     })
+    // }
 
     render() {
 
@@ -163,16 +196,9 @@ class AddReal_Estate extends React.Component {
                                 variant="outlined"
                             />
                             <br />
-                           {/* <input
-                                 type="file" 
-                                 onChange={(event)=>{
-                                   this.setState({[photo]:event.target.files[0]})}}
-                                 name="photo"
-                                class="custom-file-input"
-                                   multiple=""
-                                    id="photo" /><br/><br/>
+                           <input type="file" onChange={(e)=> this.setState({image:e.target.files[0]})} class="custom-file-input"  multiple="" id="photo" /><br/><br/>
                                 <Button id="forbuttonn" onClick={this.UploadePhoto} variant="contained" color="primary">
-                           Add Photo </Button> */}
+                           Add Photo </Button>
 
                           
                         </form>

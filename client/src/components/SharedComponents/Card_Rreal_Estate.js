@@ -18,9 +18,10 @@ const useStyles = makeStyles({
 });
 
 
-const MediaCard = ({ _id , location, isFor , real_type }) => { 
+const MediaCard = ({ _id , location, isFor , real_type ,imageUrl }) => { 
     console.log("iam in card" , real_type , 'for' , isFor )
     console.log("id" , _id)
+    console.log("image" , imageUrl)
     const classes = useStyles();
   
    const  CardId=()=>{
@@ -34,7 +35,7 @@ const MediaCard = ({ _id , location, isFor , real_type }) => {
                     <CardMedia
                     id="cardd"
                         className={classes.media}
-                        image={image} />
+                        image={imageUrl} />
                     <CardContent>
                         <Typography id="textforT"  className={classes.type} gutterBottom >
                            { real_type}

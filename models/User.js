@@ -31,7 +31,7 @@ const Userr = mongoose.Schema({
     userType: {
         type: String
     },
-    isUser: {
+    isAdmin: {
         type: Boolean
     }
     

@@ -17,7 +17,7 @@
 - [MongoDB](https://www.mongodb.com/cloud/atlas) - For the database
 ## Installing Dependencies
 1. Backend
-   - Go from root directory to Backend directory
+   - Go to root directory 
   ```
    cd  root directory/
    npm i

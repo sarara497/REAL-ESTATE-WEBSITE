@@ -46,7 +46,7 @@ router.post('/signupUser', async (req, res) => {
         const savedUser = await user.save();
         const token = await jwt.sign({ _id: user._id }, process.env.TOKEN);
         res.header("Token", token)
-        res.json({ token, userId: savedUser._id , userType: savedUser.userType })
+        res.json({ token, userId: savedUser._id , userType: savedUser.userType , username: savedUser.username})
 
     }
     catch (err) {
