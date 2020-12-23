@@ -15,9 +15,10 @@ import IsRent from '../SharedComponents/IfIt_Rent'
 
 const styles = {
     paperContainer: {
-        backgroundImage: `url(${image})`,
+        // backgroundImage: `url(${image})`,
         width: "100%",
         height: "100%"
+        
     },
     root: {
         '& .MuiTextField-root': {
@@ -155,7 +156,7 @@ class AddReal_Estate extends React.Component {
             isRent=true
         }
         return (
-            <div id="logIn_bg" style={styles.paperContainer}>
+            <div id="Add_bg" style={styles.paperContainer}>
                 <div id="Add">
                     <a href="/"><img id="logoAdd" src={logo} /></a>
                     <div id="Add1">
@@ -202,7 +203,7 @@ class AddReal_Estate extends React.Component {
 
                           
                         </form>
-                        <form id="Add2" >
+                        <form id="Add22" >
                             <TextField
                                 id="outlined-name"
                                 label="Real_Estate Type"

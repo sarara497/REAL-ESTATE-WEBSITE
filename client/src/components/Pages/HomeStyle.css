@@ -71,6 +71,19 @@
     background-color: #3f51b500 !important;
 }
 
+#Add_bg{
+    background-position: center;
+    justify-content: center !important;
+    align-items: center !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width:100% !important;
+    height:800px !important;
+    display: flex !important;
+    margin: auto !important;
+    background-color: rgb(17 3 66);
+}
+
 #forLogIn{
     /* margin-left: -1 !important; */
     width: 42% !important;
@@ -117,6 +130,8 @@
     background-color: #bacfdd9e!important;
     font-size: large;
     font-weight: 500;
+    color: #043a7d;
+    border-block-color: #1f2f444f;
 }
 
 #forget{
@@ -169,14 +184,15 @@
     /* margin-left: -100px; */
     font-size:23px;
     font-weight: 400;
-    color:  rgba(51, 47, 47, 0.89);;
+    color:  rgb(4 58 125);
+    font-weight: 500 ;
 }
 
 #Add{
    
-    width: 90% !important;
+    width: 80% !important;
     height: 700px !important;
-    background-color: #94bfdcf7!important;
+    background-color: #acb8e6f7!important;
     display:flex;
     flex-direction: column;
     margin: 25px auto;
@@ -195,6 +211,7 @@
 
 }
 
+
 #Add2{
    
     width: 70%!important;
@@ -204,6 +221,19 @@
     flex-wrap: wrap !important;
     justify-content: center !important;
     align-items: center !important;
+  
+}
+
+#Add22{
+   
+    width: 70%!important;
+    height: 500px !important;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin-top: -30px;
   
 }
 #logoAdd{
@@ -235,6 +265,11 @@
     font-family: inherit;
     font-size: inherit;
     line-height: inherit;
+    color: #043a7d !important;
+}
+
+.custom-file-input{
+    mix-blend-mode: multiply !important;
 }
 
 .wellcom{
