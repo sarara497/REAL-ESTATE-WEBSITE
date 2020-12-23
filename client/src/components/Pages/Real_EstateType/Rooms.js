@@ -80,8 +80,8 @@ class Rooms extends Component {
                                 {
                                     real_estates.length ?
 
-                                        real_estates.map(({ real_type, location, isFor }, index) =>
-                                            <Card real_type={real_type} location={location} isFor={isFor}  key={index} />
+                                        real_estates.map(({ real_type, location, isFor , imageUrl }, index) =>
+                                            <Card real_type={real_type} location={location} isFor={isFor} imageUrl={imageUrl} key={index} />
                                         )
                                         :
                                         <h1 id="username">There Is No Rooms</h1>

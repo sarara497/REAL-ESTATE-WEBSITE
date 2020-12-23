@@ -124,6 +124,10 @@ class Search extends Component {
             </div>
           </Toolbar>
         </AppBar>
+
+        {/* <div>
+          <h1 style={{'color':'black'}}>Hiiiii</h1>
+        </div> */}
       </div>
     );
   }

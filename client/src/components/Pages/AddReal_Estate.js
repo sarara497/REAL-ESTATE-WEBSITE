@@ -126,7 +126,7 @@ class AddReal_Estate extends React.Component {
         console.log("Files image" , this.state.image)
         const formData = new FormData()
         formData.append("file" , this.state.image)
-        formData.append("Photo_RealEstate" , "Real_Estate_Photos")
+        formData.append("upload_preset", "Real_Estate_Photos")
 
         const res = await fetch('https://api.cloudinary.com/v1_1/dpycouy53/image/upload', {
           method: 'POST',
