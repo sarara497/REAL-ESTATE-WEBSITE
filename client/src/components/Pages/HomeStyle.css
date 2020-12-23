@@ -31,20 +31,23 @@
 
 #formation{
     margin-top: -30px !important;
-    background-color: rgb(87 83 97) !important;
-    margin-bottom: -30px !important;
+    background-color: rgb(7 41 71) !important;
+    margin-bottom: auto;
+    align-items: center !important;
+    justify-content: center !important;
 }
 #profile{
-    background-image:url(../../photo/forProfile.png) ;
-    /* background-size: cover;
-     width: "100%";
+    /* background-image:url(../../photo/forProfile.png) ; */
+    background-size: cover;
+     /* width: "100%";
      height: "100%"; */
-     background-position: center;
+    margin-top: 20px ;
+     /* background-position: center;
      background-repeat: no-repeat;
-     background-size: cover; 
-     width:100% !important;
-     height:1000px !important; 
-     background-color: #3f51b500 !important;
+     background-size: cover;  */
+     /* width:100% !important;
+     height:1000px !important;  */
+     background-color: #0e1955 !important;
     
  
  }

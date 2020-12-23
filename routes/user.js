@@ -6,7 +6,7 @@ const auth = require('../middlewares/middleware')
 
 
 const User = require('../models/User')
-
+var newuser={}
 
 router.get('/auth', auth, (req, res) => {
   

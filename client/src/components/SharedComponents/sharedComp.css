@@ -1,7 +1,7 @@
 #nav{
     z-index: 1 !important;
     position: fixed !important;
-    background-color: rgba(255, 255, 255, 0) !important;
+    background-color: rgb(4 58 125) !important;
 }
 
 .MuiAppBar-colorPrimary{
@@ -51,11 +51,12 @@
     font-family: "Times New Roman", Times, serif  !important;
     font-weight: 1000 !important;
     text-align: center !important;
+    border-radius: 20px !important;
 
 }
 
 #forbtnH:hover{
-    background-color: rgba(27, 75, 117, 0.973) !important; 
+    background-color: rgba(95, 134, 168, 0.973) !important; 
 }
 
 #forAdd{
@@ -110,7 +111,7 @@
     text-align: center !important;
 }
 #acc{
-   color: rgba(8, 41, 70, 0.973) !important; 
+   color:rgb(200 199 200) !important; 
    
 }
 
@@ -118,12 +119,12 @@
     font-size: 65px !important;
 }
  #acc:hover{
-    color: rgba(27, 75, 117, 0.973) !important;   
+    color: rgba(248, 250, 252, 0.973) !important;   
  }
 .page-footer{
     z-index: 1 !important;
     margin-top: -1px !important;
-    background-color:  rgb(4 2 33) !important;
+    background-color: #032f65 !important;
     color: white !important;
     
 } 

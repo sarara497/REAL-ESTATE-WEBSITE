@@ -1,0 +1,110 @@
+
+  
+  .container {
+    max-width: 4000px;
+    margin: 30px auto 30px;
+    padding: 0 !important;
+    width:100%;
+    background-color: #fff;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.10), 0 3px 6px rgba(0,0,0,0.10);
+   
+  }
+  
+ 
+  main {
+        padding: 20px 20px 0px 20px;
+        
+       
+  }
+  
+  .left {
+    display: flex;
+    /* align-items: center;
+    justify-content: center; */
+    /* flex-direction: row; */
+    margin-top: 450px;
+    align-items: center !important;
+        justify-content: center !important;
+  }
+  
+  .photo {
+    width: 180px;
+    height: 180px;
+    margin-top: -80px;
+    border-radius: 100px;
+    border: 4px solid #fff;
+    margin-left: 0px ;
+    background-color: rgb(219, 208, 208);
+  }
+
+  #forpro{
+      display: flex;
+      flex-direction: column !important;
+      margin-top: -170px;
+      /* margin-left: 100px; */
+      /* border-radius: 100px; */
+      border: 4px solid rgb(141, 136, 136);
+      width: 90%;
+      height: fit-content  ;
+      margin-bottom: 60px;
+      
+  }
+  
+  
+  .name {
+    margin-top: 20px;
+    font-family: "Times New Roman", Times, serif  !important;
+    font-weight: 600;
+    font-size: 25pt;
+    color: rgb(197, 189, 189);
+    margin-left: 0px ;
+  }
+  
+  .info {
+    margin-top: -5px;
+    margin-bottom: 5px;
+    font-family: "Times New Roman", Times, serif  !important;
+    font-size: 20pt;
+    color: rgb(197, 189, 189);;
+    margin-left: 0px ;
+  }
+  
+  
+  
+  .right {
+    padding: 0 25px 0 25px !important;
+    margin-top: -180px;
+    margin-left: 00px;
+  }
+  
+  .nav2 {
+    display: inline-flex;
+  }
+  
+  .nav2 li {
+    margin: 40px 30px 0 10px;
+    /* cursor: pointer; */
+    font-size: 30pt;
+    text-transform: uppercase;
+    font-family: "Times New Roman", Times, serif  !important;
+    font-weight: 800;
+    color: rgb(219, 207, 207) !important;
+    list-style: none;
+  }
+  
+  .nav2 li:hover  { 
+    color: rgb(255, 251, 251) !important;
+    
+  }
+  
+  
+  @media (max-width:990px) {
+    .nav {
+      display: none;
+    }
+  }
+  .gallery  {
+    margin-top: 35px;
+  }
+  
+  

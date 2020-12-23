@@ -47,14 +47,14 @@ class App extends React.Component {
       .then(data => {
         console.log(data)
         this.setState({email: data.email, isAdmin: data.isAdmin, userType: data.userType })
-        console.log("isAdmin" , this.state.isAdmin)
-        console.log("type" , this.state.userType)
+        // console.log("isAdmin" , this.state.isAdmin)
+        // console.log("type" , this.state.userType)
       })
   }
 
 
   render() {
-    const {userId , username} = this.state
+    const {userId , username , email} = this.state
     return (
       <div className="App">
 
@@ -64,7 +64,7 @@ class App extends React.Component {
           <Route path="/" exact render={() => <Home userId={userId} />} />
         
           <Route path="/LogIn" exact render={() => <LogIn />} />
-          <Route path="/Profile" exact render={() => <Profile username={username} />} />
+          <Route path="/Profile" exact render={() => <Profile email={email} username={username} />} />
           <Route path="/SignUp" exact render={() => <SignUp />} />
           <Route path="/AddReal_Estate" exact render={() =>  userId ?
           <AddReal_Estate userId={userId} /> : <Redirect to='/LogIn' />} />
