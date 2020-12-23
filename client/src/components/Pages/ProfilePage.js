@@ -40,7 +40,7 @@ const ProfilePage = ({ username }) => {
             <br /><br />
                 <h1 id="username">Hello {username}</h1>
                 <br /><br />
-                <h3 id="forUser">Your Added Real-Estate :</h3>
+                <h3 id="forUser">Your Addded Real-Estate :</h3>
                 <br /><br />
 
                 <div id="cardsPage">
