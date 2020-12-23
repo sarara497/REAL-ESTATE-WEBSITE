@@ -26,8 +26,9 @@ const styles = {
  const Home  = ({userId})=>{
    
         return (
-            <div >
+            <div > 
                 <div id="home_bg" >
+                   
                     <Paper >
                     {
                     userId ?

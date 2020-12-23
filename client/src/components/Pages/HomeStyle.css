@@ -10,25 +10,33 @@
     background-color: #3f51b500 !important;
     justify-content: center !important;
     align-items:center !important; 
-   
-
 }
 
 
 #home_bgMore{
-    background-image:url(../../photo/ForMore.jpg) ;
-     background-position: center;
+   
+    background-size: cover;
+     /* width: "100%";
+     height: "100%"; */
+    margin-top: 0px ;
+     /* background-position: center;
      background-repeat: no-repeat;
-     background-size: cover; 
-     width:100% !important;
-     height:1000px !important; 
-     background-color: #3f51b500 !important;
-     justify-content: center !important;
-     align-items:center !important; 
+     background-size: cover;  */
+     /* width:100% !important;
+     height:1000px !important;  */
+     background-color: #0e1955 !important;
    
  
  }
-
+ .photoMore {
+    width: 500px;
+    height: 500px;
+    margin-top: -80px;
+    border-radius: 20px;
+    border: 4px solid #fff;
+    margin-left: 0px ;
+    background-color: rgb(219, 208, 208);
+  }
 #formation{
     margin-top: -30px !important;
     background-color: rgb(7 41 71) !important;
@@ -322,7 +330,7 @@
   }
 
   #username{
-      color: rgb(4, 4, 34);
+      color: rgb(219, 207, 207);
   }
 
   

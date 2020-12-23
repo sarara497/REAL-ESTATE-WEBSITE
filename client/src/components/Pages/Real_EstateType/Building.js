@@ -66,8 +66,7 @@ class Building extends Component {
                                 <Header />
                         }
                     </Paper><br /><br /><br /><br /><br /><br /><br /><br /><br />
-                    <h4 className="wellcom"> The  Place Where You will Find All Real-Estate in Your Hands ♥ !</h4>
-
+                   
                 </div>
                 {/* <Search /> */}
                 <div  id="formation">

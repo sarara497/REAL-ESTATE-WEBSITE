@@ -29,12 +29,12 @@ class MoreInfo extends Component {
         this.state = {
             real_estates: [],
             card_id: localStorage.getItem("CardId"),
-            userId : localStorage.getItem("userId")
+            userId: localStorage.getItem("userId")
         }
     }
 
     componentDidMount = () => {
-       this.getReal_Estates()
+        this.getReal_Estates()
     }
 
     getReal_Estates = () => {
@@ -52,12 +52,12 @@ class MoreInfo extends Component {
     }
 
     render() {
-        const {userId , real_estates}=this.state
+        const { userId, real_estates } = this.state
         console.log("userid=", userId)
         console.log("id=", this.state.card_id)
         console.log("this real = ", this.state.real_estates)
         console.log("this real = ", real_estates.location)
-        
+
         return (
             <div >
                 <div id="home_bgMore" >
@@ -69,20 +69,36 @@ class MoreInfo extends Component {
                                 :
                                 <Header />
                         }
-                    </Paper><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-                    <h4 className="wellcom1"> The  Place Where You will Find All Real-Estate in Your Hands ♥ !</h4>
+                    </Paper>
+                </div>
+                <div id="formation" >
+                    {/* <div class="container"> */}
+                    <main>
+                        <div class="row">
+                            <div class="left col-lg-4">
+                                <div id="forpro">
+                                    <div class="photo-left">
+                                        <img class="photoMore" src={real_estates.imageUrl} />
+                                    </div><br /><br />
+                                  
+                                    <h1 class="name">More Information</h1><br /><br />
+                                    <h3 class="info">The Real_Estate Type : &nbsp; {real_estates.real_type}</h3><br />
+                                    <h3 class="info">Location : &nbsp;{real_estates.location}</h3><br />
+                                    <h3 class="info">Real_Estate Description : &nbsp;{real_estates.description}</h3><br />
+                                    <h3 class="info">Real_Estate price : &nbsp;{real_estates.price}{real_estates.currency}&nbsp;&nbsp;&nbsp;&nbsp; lowest_price : &nbsp;{real_estates.lowest_price}{real_estates.currency}</h3><br />
+                                    <h3 class="info">Real_Estate Area  : &nbsp;{real_estates.area}</h3><br />
+                                    <h3 class="info">owner_phoneNumber: &nbsp;{real_estates.owner_phoneNumber}</h3><br />
+                                    <br /><br /><br />
+
+                                </div>
+                            </div>
+                        </div>
+                    </main>
+                    {/* </div> */}
 
                 </div>
-                <Search />
-                <div id="forh" >
-                    <h1>More Information</h1>
-                    <h3>The Real_Estate Type : &nbsp; {real_estates.real_type}</h3>
-                    <h3>Location : &nbsp;{real_estates.location}</h3>
-                    <h3>Real_Estate Description : &nbsp;{real_estates.description}</h3>
-                    <h3>Real_Estate price : &nbsp;{real_estates.price}{real_estates.currency}&nbsp;&nbsp;&nbsp;&nbsp; lowest_price : &nbsp;{real_estates.lowest_price}{real_estates.currency}</h3>
-                    <h3>Real_Estate Area  : &nbsp;{real_estates.area}</h3>
-                    <h3>owner_phoneNumber: &nbsp;{real_estates.owner_phoneNumber}</h3>
-                </div>
+
+
                 <Footer />
 
             </div>
@@ -90,5 +106,15 @@ class MoreInfo extends Component {
     }
 
 }
+
+{/* <div id="forh" >
+<h1>More Information</h1>
+<h3>The Real_Estate Type : &nbsp; {real_estates.real_type}</h3>
+<h3>Location : &nbsp;{real_estates.location}</h3>
+<h3>Real_Estate Description : &nbsp;{real_estates.description}</h3>
+<h3>Real_Estate price : &nbsp;{real_estates.price}{real_estates.currency}&nbsp;&nbsp;&nbsp;&nbsp; lowest_price : &nbsp;{real_estates.lowest_price}{real_estates.currency}</h3>
+<h3>Real_Estate Area  : &nbsp;{real_estates.area}</h3>
+<h3>owner_phoneNumber: &nbsp;{real_estates.owner_phoneNumber}</h3>
+</div> */}
 
 export default MoreInfo;
