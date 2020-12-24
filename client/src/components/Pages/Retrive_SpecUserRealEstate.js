@@ -42,8 +42,8 @@ class UserReal_Estats extends Component {
              {
                 real_estates.length ?
 
-                 real_estates.map(({ real_type, location,isFor , imageUrl} , index) =>
-                   <Card real_type={real_type} location={location} isFor={isFor}  imageUrl={imageUrl} key={index} />
+                 real_estates.map(({_id, real_type, location,isFor , imageUrl} , index) =>
+                   <Card _id={_id} real_type={real_type} location={location} isFor={isFor}  imageUrl={imageUrl} key={index} />
                 )
                 :
                 <h1 id="username">You dont Have any real estate</h1>
