@@ -1,7 +1,13 @@
-#nav{
+#nav1{
     z-index: 1 !important;
     position: fixed !important;
     background-color: rgb(4 58 125) !important;
+}
+
+#nav{
+    z-index: 1 !important;
+    position: fixed !important;
+    background-color:rgba(51, 105, 255, 0) !important;
 }
 
 .MuiAppBar-colorPrimary{

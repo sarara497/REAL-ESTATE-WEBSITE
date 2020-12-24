@@ -6,7 +6,7 @@ import './Profile.css'
 
 
 import UserReal_Estats from './Retrive_SpecUserRealEstate'
-import LogIn_Header from '../SharedComponents/LogIn_Header'
+import Profile_Header from '../SharedComponents/Profile-header'
 import Footer from '../SharedComponents/Footer'
 import Search from '../SharedComponents/Search'
 
@@ -30,7 +30,7 @@ const ProfilePage = ({ username, email }) => {
         <div >
             <div id="profile" >
                 <Paper >
-                    <LogIn_Header />
+                    <Profile_Header />
                 </Paper>
             </div>
 

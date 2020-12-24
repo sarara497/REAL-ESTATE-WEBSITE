@@ -6,8 +6,8 @@ import image from "../../../src/photo/home.jpg"
 
 
 
-import Header from '../SharedComponents/Header'
-import LogIn_Header from '../SharedComponents/LogIn_Header'
+import Header1 from '../SharedComponents/HeaderInfo'
+import Profile_Header from '../SharedComponents/Profile-header'
 import Footer from '../SharedComponents/Footer'
 import REal_Estates from './Retrive_Real'
 import Search from '../SharedComponents/Search'
@@ -64,10 +64,10 @@ class MoreInfo extends Component {
                     <Paper >
                         {
                             userId ?
-                                <LogIn_Header />
+                                <Profile_Header />
 
                                 :
-                                <Header />
+                                <Header1/>
                         }
                     </Paper>
                 </div>
