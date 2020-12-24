@@ -31,12 +31,47 @@
  .photoMore {
     width: 500px;
     height: 500px;
-    margin-top: -80px;
+    margin-top: 0px;
     border-radius: 20px;
     border: 4px solid #fff;
     margin-left: 0px ;
     background-color: rgb(219, 208, 208);
   }
+
+  #forproinfo{
+    display: flex;
+    flex-direction: column !important;
+    margin-top: -170px;
+    /* margin-left: 100px; */
+    /* border-radius: 100px; */
+    border: 4px solid rgb(141, 136, 136);
+    width: 90%;
+    height: fit-content  ;
+    margin-bottom: 60px;
+    justify-content: center !important;
+    align-items: center !important;
+    
+}
+
+ #forRow{
+    display: flex;
+    flex-direction: row !important;
+    margin-bottom: 40px; 
+    
+    /* margin-top: -170px;
+    border: 4px solid rgb(141, 136, 136);
+    width: 90%;
+    height: fit-content  ;
+    margin-bottom: 60px; */
+ }
+
+ #forCol{
+    display: flex;
+    margin-bottom: 40px ;
+    flex-direction: column !important;
+    height: fit-content
+    
+ }
 #formation{
     margin-top: -30px !important;
     background-color: rgb(7 41 71) !important;

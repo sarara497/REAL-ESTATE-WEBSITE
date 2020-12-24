@@ -76,19 +76,25 @@ class MoreInfo extends Component {
                     <main>
                         <div class="row">
                             <div class="left col-lg-4">
-                                <div id="forpro">
+                                <div id="forproinfo"><br /><br /><br />
+                                    <h1 class="name">More Information</h1><br /><br /><br />
+                                    <div id="forRow">
                                     <div class="photo-left">
                                         <img class="photoMore" src={real_estates.imageUrl} />
-                                    </div><br /><br />
-                                  
-                                    <h1 class="name">More Information</h1><br /><br />
-                                    <h3 class="info">The Real_Estate Type : &nbsp; {real_estates.real_type}</h3><br />
+                                    </div><br /><br /><br /><br />
+                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                    <div id="forCol">
+                                    <br /><br />
+                                    <h3 class="info">The Real_Estate Type : &nbsp; {real_estates.real_type}</h3><br /><h3 class="info">It's For : &nbsp;{real_estates. isFor}</h3><br />
                                     <h3 class="info">Location : &nbsp;{real_estates.location}</h3><br />
+                                    <h3 class="info">Full Address : &nbsp;{real_estates.full_Address}</h3><br />
                                     <h3 class="info">Real_Estate Description : &nbsp;{real_estates.description}</h3><br />
                                     <h3 class="info">Real_Estate price : &nbsp;{real_estates.price}{real_estates.currency}&nbsp;&nbsp;&nbsp;&nbsp; lowest_price : &nbsp;{real_estates.lowest_price}{real_estates.currency}</h3><br />
                                     <h3 class="info">Real_Estate Area  : &nbsp;{real_estates.area}</h3><br />
                                     <h3 class="info">owner_phoneNumber: &nbsp;{real_estates.owner_phoneNumber}</h3><br />
                                     <br /><br /><br />
+                                    </div>
+                                    </div>
 
                                 </div>
                             </div>
