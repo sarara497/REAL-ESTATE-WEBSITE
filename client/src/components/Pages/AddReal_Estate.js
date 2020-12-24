@@ -257,9 +257,10 @@ class AddReal_Estate extends React.Component {
                                 variant="outlined"
                             />
                         </form>
+                        
                         <form id="Add2" >
                             <div>
-                                <input className="radio1" type="radio" id="sale" onChange={!this.handleChange} name="isFor" value="Sale" />
+                            <input className="radio2" type="radio" id="sale" onChange={this.handleChange} name="isFor" value="Sale" />
                                    &nbsp;<label id="lab" for="sale">Sale</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                <input className="radio2" type="radio" id="rent" onChange={this.handleChange} name="isFor" value="Rent" />
                                    &nbsp;<label id="lab" for="rent">Rent</label><br /><br />

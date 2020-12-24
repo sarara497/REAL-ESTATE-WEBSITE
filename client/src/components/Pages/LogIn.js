@@ -50,7 +50,7 @@ class LogIn extends React.Component {
         e.preventDefault();
         axios.post('https://mernrealestateproject.herokuapp.com/users/signInUser', this.state)
             .then((response) => {
-             
+                localStorage.setItem('Token', response.data.token)
                 localStorage.setItem('isAdmin', response.data.isAdmin)
                 localStorage.setItem('userType', response.data.userType)
                 localStorage.setItem('userId', response.data.userId)

@@ -38,14 +38,14 @@ class App extends React.Component {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
-        'token': localStorage.getItem('token')
+        'Token': localStorage.getItem('Token')
       }
 
     };
     fetch('https://mernrealestateproject.herokuapp.com/users/auth', requestOptions)
       .then(response => response.json())
       .then(data => {
-        console.log(data)
+        console.log("ayth" , data)
         this.setState({email: data.email, isAdmin: data.isAdmin, userType: data.userType })
         // console.log("isAdmin" , this.state.isAdmin)
         // console.log("type" , this.state.userType)

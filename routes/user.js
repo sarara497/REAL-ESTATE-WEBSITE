@@ -9,7 +9,7 @@ const User = require('../models/User')
 var newuser={}
 
 router.get('/auth', auth, (req, res) => {
-  
+    if (req.user) {
     res.json({
         id: req.user._id,
         username: req.user.username,
@@ -17,7 +17,7 @@ router.get('/auth', auth, (req, res) => {
         isAdmin: req.user.isAdmin,
         userType:req.user.userType,
         success: true
-    })
+    })}
 })
 
 router.post('/signupUser', async (req, res) => {
