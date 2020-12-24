@@ -138,7 +138,13 @@ class AddReal_Estate extends React.Component {
         this.setState({
             imageUrl: file.secure_url
         })
-      }
+        const {imageUrl}=this.state
+        if(imageUrl){
+            alert("Your Photo is Added")
+            return 
+          }
+
+    }
 
     // updaterealimage =(obj)=>{
     //     axios.post('' , obj)

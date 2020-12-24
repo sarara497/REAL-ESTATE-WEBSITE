@@ -55,6 +55,11 @@ class SignUp extends React.Component {
     }
     handelOnClick = async (e) => {
         console.log(this.state)
+        const { password } = this.state;
+        if(password.length<6){
+          alert("Password should not be less than 6 charecters")
+          return 
+        }
         e.preventDefault();
         axios.post('https://mernrealestateproject.herokuapp.com/users/signupUser', this.state)
             .then((response) => {
@@ -96,6 +101,7 @@ class SignUp extends React.Component {
                                 id="outlined-name"
                                 label="Email"
                                 name="email"
+                                type="email"
                                 value={this.state.email}
                                 onChange={this.handleChange}
                                 variant="outlined"

@@ -5,10 +5,12 @@ import Button from '@material-ui/core/Button';
 import Link from '@material-ui/core/Link';
 import link from 'react-router-dom'
 import axios from "axios"
+import { Switch, Route, Redirect } from 'react-router-dom';
 
 import image from "../../../src/photo/forSignUP.jpg"
 import logo from '../../../src/photo/logo.png'
 
+import Home from './Home'
 
 
 
@@ -30,7 +32,8 @@ class LogIn extends React.Component {
         super(props)
         this.state = {
             email: '',
-            password: ''
+            password: '',
+          
         }
         this.handelOnClick = this.handelOnClick.bind(this)
         this.handleChange = this.handleChange.bind(this)
@@ -47,6 +50,7 @@ class LogIn extends React.Component {
         e.preventDefault();
         axios.post('https://mernrealestateproject.herokuapp.com/users/signInUser', this.state)
             .then((response) => {
+             
                 localStorage.setItem('isAdmin', response.data.isAdmin)
                 localStorage.setItem('userType', response.data.userType)
                 localStorage.setItem('userId', response.data.userId)
@@ -54,11 +58,13 @@ class LogIn extends React.Component {
           
                 window.location.reload()
             })
+            
+
     }
 
 
     render() {
-
+        const {login}=this.state
         return (
             <div id="logIn_bg" style={styles.paperContainer}>
                 <div id="forLogIn">
@@ -73,6 +79,7 @@ class LogIn extends React.Component {
                                 className="forText"
                                 label="Your Email"
                                 name="email"
+                                type="email"
                                 onChange={this.handleChange}
                                 variant="outlined"
                             /><br /><br /><br />
@@ -92,9 +99,11 @@ class LogIn extends React.Component {
                         </Link>
 
                         <br /><br /><br />
-                     <Button href="/" onClick={this.handelOnClick} id="forbutton" variant="contained" color="primary">
+                     <Button onClick={this.handelOnClick} id="forbutton" variant="contained" color="primary">
                             LogIn
                         </Button>
+                      
+                        
                         <br />
                         <h5 id="h5">
                             You don't have an Account ?    <Link id="sign" href="/SignUp" >
