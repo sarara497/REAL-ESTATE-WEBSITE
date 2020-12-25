@@ -14,6 +14,7 @@ router.get('/auth', auth, (req, res) => {
         id: req.user._id,
         username: req.user.username,
         email: req.user.email,
+        phoneNumber:req.user.phoneNumber,
         isAdmin: req.user.isAdmin,
         userType:req.user.userType,
         success: true

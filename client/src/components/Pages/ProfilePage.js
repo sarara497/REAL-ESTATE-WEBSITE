@@ -20,12 +20,9 @@ const styles = {
 };
 
 
-{/* <h1 id="username">Hello {username}</h1> */ }
-{/* <div id="cardsPage">
-                    
-                </div> */}
-const ProfilePage = ({ username, email }) => {
 
+const ProfilePage = ({ username, email  ,phoneNumber}) => {
+    console.log("data" , email , username)
     return (
         <div >
             <div id="profile" >
@@ -44,8 +41,8 @@ const ProfilePage = ({ username, email }) => {
                                     <img class="photo" src="https://sleepxneckrest.com/wp-content/uploads/2018/11/login-user-icon.png" />
                                 </div>
                                 <h4 class="name">{username}</h4>
-                                <p class="info">05678756758</p><br />
-                                <p class="info">{username}@gmail.com</p><br /><br /><br /><br /><br /><br /><br /><br />
+                                <p class="info">{phoneNumber}</p><br />
+                                <p class="info">{email}</p><br /><br /><br /><br /><br /><br /><br /><br />
 
 
 

@@ -5,7 +5,7 @@ import Button from '@material-ui/core/Button';
 import Link from '@material-ui/core/Link';
 import link from 'react-router-dom'
 import axios from "axios"
-import { Switch, Route, Redirect } from 'react-router-dom';
+import {Redirect } from 'react-router-dom';
 
 import image from "../../../src/photo/forSignUP.jpg"
 import logo from '../../../src/photo/logo.png'
@@ -33,7 +33,7 @@ class LogIn extends React.Component {
         this.state = {
             email: '',
             password: '',
-          
+            login:false
         }
         this.handelOnClick = this.handelOnClick.bind(this)
         this.handleChange = this.handleChange.bind(this)
@@ -50,6 +50,7 @@ class LogIn extends React.Component {
         e.preventDefault();
         axios.post('https://mernrealestateproject.herokuapp.com/users/signInUser', this.state)
             .then((response) => {
+                this.setState({login:true})
                 localStorage.setItem('Token', response.data.token)
                 localStorage.setItem('isAdmin', response.data.isAdmin)
                 localStorage.setItem('userType', response.data.userType)
@@ -65,6 +66,9 @@ class LogIn extends React.Component {
 
     render() {
         const {login}=this.state
+        if(this.state.login){
+            return <Redirect to={'/'} />
+        }
         return (
             <div id="logIn_bg" style={styles.paperContainer}>
                 <div id="forLogIn">

@@ -3,7 +3,7 @@ import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import Link from '@material-ui/core/Link';
 import axios from "axios"
-
+import {  Redirect } from 'react-router-dom';
 import image from "../../../src/photo/forSignUP.jpg"
 import logo from '../../../src/photo/logo.png'
 
@@ -43,6 +43,7 @@ class SignUp extends React.Component {
             phoneNumber: '',
             password: '',
             userType: '',
+            signup:false
         }
         this.handelOnClick = this.handelOnClick.bind(this)
         this.handleChange = this.handleChange.bind(this)
@@ -63,6 +64,7 @@ class SignUp extends React.Component {
         e.preventDefault();
         axios.post('https://mernrealestateproject.herokuapp.com/users/signupUser', this.state)
             .then((response) => {
+                this.setState({signup:true})
                 console.log(response)
                 localStorage.setItem('Token', response.data.token)
                 localStorage.setItem('userId', response.data.userId)
@@ -82,6 +84,9 @@ class SignUp extends React.Component {
 
     render() {
         //    const preventDefault = (event) => event.preventDefault();
+        if(this.state.signup){
+            return <Redirect to={'/'} />
+        }
         return (
             <div id="logIn_bg" style={styles.paperContainer}>
                 <div id="forLogIn">

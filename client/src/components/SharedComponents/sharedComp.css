@@ -14,6 +14,15 @@
     background-color: rgba(51, 105, 255, 0) !important;
 }
 
+#logoHome{
+    /* background-size: cover; */
+    width:30% !important;
+    height:140px !important;
+    /* background-color: #424b7e00 !important;  */
+    margin-bottom: 20px;
+    margin-top: 20px; 
+}
+
 
 #logo{
     background-size: cover;

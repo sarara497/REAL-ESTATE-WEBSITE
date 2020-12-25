@@ -34,7 +34,7 @@ export default function ButtonAppBar() {
             <AppBar position="static">
                 <Toolbar>
 
-                    <img id="logo" src={logo} />
+                    <img id="logo"  src={logo} ></img>
 
                     <div id="forNav">
                         <Button  href='/' id="forbtnH" color="inherit">All&nbsp;</Button>
